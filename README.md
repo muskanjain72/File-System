@@ -135,94 +135,272 @@ All error responses from the Nameserver use the ERR|<CODE>|<DETAIL> convention d
 
 ## Commands(alphabetical order)
 
-- ADDACCESS <permission> <filename> <clientname :(PERMISSION ID EITHER R OR W ..NO RW)
-	- Purpose: Grant a user explicit read/write permission on a file.
-	- Flow:
-		1.Client -> Nameserver: Packet.msg = "ADDACCESS <perm> <filename> <clientname>"
-		2.Nameserver validates parameters and existence of file and target client.
-			- If the file or client doesn't exist, NM returns an error Packet: "ERR|not_found|<filename>" or "ERR|no_such_client|<clientname>".
-		3.If validation passes and the requester is owner, Nameserver updates file metadata and returns OK ("ADDACCESS_OK" backed in logs and reply).
+### ADDACCESS
+```
+ADDACCESS <permission> <filename> <clientname>
+```
+**Note:** Permission must be either `R` or `W` (no `RW`).
 
-- APPROVE <filename> <username> <perm?>
-	- Purpose: Approve a pending access request made by another user.
-	- Flow: NM checks that the approver is owner, applies the permission and responds with an OK/ERR Packet.
+**Purpose:**  
+Grant a user explicit read or write permission on a file.
 
-- CHECKPOINT <filename> <tag>
-	- Purpose: create a persistent snapshot of the file contents on the StorageServer.
-	- Flow:
-		1. Nameserver ensures file exists and the requester has permission.
-		2. NM sends a request to the StorageServer to create the checkpoint file (SS stores the checkpoint under a deterministic name that includes inode and tag).
-		3. NM records the checkpoint tag in local metadata and replies to client with OK or ERR.
+**Flow:**
+1. Client → Name Server:  
+   `Packet.msg = "ADDACCESS <perm> <filename> <clientname>"`
+2. Name Server validates parameters and existence of the file and target client.  
+   - If the file does not exist:  
+     `ERR|not_found|<filename>`
+   - If the client does not exist:  
+     `ERR|no_such_client|<clientname>`
+3. If validation passes and the requester is the owner, the Name Server updates file metadata and responds with `ADDACCESS_OK`.
 
-- CREATE <filename>
-	- Purpose: create new file metadata (creates inode, allocates slot on a storage server).
-	- Flow: NM assigns an inode, decides on a StorageServer, writes metadata and returns OK or an appropriate ERR (FILE_EXISTS, MISSING_PARENT, etc.).
+---
 
-- CREATEFOLDER <path>
-	- Purpose: create a folder (nameserver metadata only).
-	- Flow: NM validates parent exists, creates FolderMeta, returns OK or error.
+### APPROVE
+```
+APPROVE <filename> <username> <permission>
+```
 
-- DELETE <filename>
-	- Purpose: remove a file from metadata and instruct StorageServer to delete content.
-	- Flow:
-		1. Client -> NM: "DELETE <filename>"
-		2. NM validates file existence & permissions.
-		3. NM removes local metadata entry, sends a "DELETE <ss_id>/<inode>.txt" request to the StorageServer and marks the inode free.
-		4. NM replies to client with: "OK|DELETE_SUCCESS|<filename>" on success, or an ERR on failure.
+**Purpose:**  
+Approve a pending access request made by another user.
 
-- EXEC <filename>
-	- Purpose: ask the StorageServer to execute the script/program stored in file content and stream stdout back to the client via the Nameserver.
-	- Flow:
-		1. Client -> NM: "EXEC <filename>"
-		2. NM verifies permissions and availability of the StorageServer holding the file.
-		3. NM sends an "EXEC <inode>" command to the StorageServer.
-		4. StorageServer responds with the shell command to run (or direct output). NM builds a safe shell invocation and runs it using popen(), streaming output lines back to the client as Packet messages framed with "EXEC|BEGIN" and "EXEC|END" markers.
-		5. NM streams the process output line-by-line to the client as separate Packet messages.
+**Flow:**
+1. Client → Name Server: `APPROVE <filename> <username> <permission>`
+2. Name Server verifies that the requester is the file owner.
+3. Permission is applied and an `OK` or `ERR` response is returned.
 
-- INFO <filename>
-	- Purpose: show metadata about a file (size, owner, inode, storage server, counts, timestamps).
-	- Flow: NM reads metadata and replies with a Packet containing printable info.
+---
 
-- LIST
-	- Purpose: list files accessible to the client (short form).
-	- Flow: NM assembles a list from its metadata and returns in a Packet.
+### CHECKPOINT
+```
+CHECKPOINT <filename> <tag>
+```
 
-- LISTCHECKPOINT <filename> [tag]
-	- Purpose: list checkpoint tags and timestamps for a file.
-	- Flow: NM reads checkpoint list from metadata and returns a structured response.
+**Purpose:**  
+Create a persistent snapshot of a file’s contents on the Storage Server.
 
-- MOVE <filename> <folder>
-	- Purpose: move file metadata under a different folder path.
-	- Flow: NM validates target folder and modifies metadata, then replies OK/ERR.
+**Flow:**
+1. Name Server verifies file existence and user permissions.
+2. Name Server instructs the Storage Server to create a checkpoint using `<inode> + <tag>`.
+3. Checkpoint metadata is recorded and an `OK` or `ERR` response is sent to the client.
 
-- READ <filename>
-	- Purpose: read a file's content.
-	- Flow:
-		1. Client -> NM: "READ <filename>"
-		2. NM finds file metadata and the StorageServer holding the inode.
-		3. NM replies with a response message that contains StorageServer IP, port and inode (e.g. "READ|<filename>|<ss_ip>|<ss_port>|<inode>").
-		4. The client then connects directly to the StorageServer and requests the file content.
+---
 
-- REVERT <filename> <tag>
-	- Purpose: restore a file's contents to a previously checkpointed tag.
-	- Flow: NM instructs the StorageServer to copy the checkpoint file back to the live file and updates metadata, replying with OK/ERR.
+### CREATE
+```
+CREATE <filename>
+```
 
-- REQUESTACCESS -R|-W|-RW <filename>
-	- Purpose: request permission to read/write a file from its owner.
-	- Flow: NM records the request in `pending_requests` on the FileMeta and replies with a confirmation or an error if file doesn't exist.
+**Purpose:**  
+Create new file metadata and allocate storage.
 
-- REMACCESS <filename> <clientname>
-	- Purpose: remove access for a client from a file.
-	- Flow: NM checks owner permissions and removes the permission entry; replies OK/ERR.
+**Flow:**
+1. Name Server assigns a new inode.
+2. A Storage Server is selected.
+3. Metadata is written and `OK` is returned, or an error such as `FILE_EXISTS`.
 
-- STREAM <filename>
-	- Purpose: stream the file contents (NM coordinates or the client connects to SS per implementation).
-	- Flow: NM communicates the SS location and inode; the client connects to StorageServer for streaming.
+---
 
-- UNDO <filename>
-	- Purpose: rollback last local change (metadata + storage content interaction).
-	- Flow: NM coordinates with the StorageServer to restore previous sentence/contents.
+### CREATEFOLDER
+```
+CREATEFOLDER <path>
+```
 
+**Purpose:**  
+Create a folder in the namespace (metadata only).
+
+**Flow:**
+1. Name Server validates that the parent folder exists.
+2. Folder metadata is created.
+3. Responds with `OK` or an appropriate error.
+
+---
+
+### DELETE
+```
+DELETE <filename>
+```
+
+**Purpose:**  
+Delete a file and its associated data.
+
+**Flow:**
+1. Client → Name Server: `DELETE <filename>`
+2. Name Server validates file existence and permissions.
+3. Metadata is removed and the Storage Server is instructed to delete the file.
+4. Client receives `OK|DELETE_SUCCESS|<filename>` or an error.
+
+---
+
+### EXEC
+```
+EXEC <filename>
+```
+
+**Purpose:**  
+Execute file contents as shell commands and stream output to the client.
+
+**Flow:**
+1. Client → Name Server: `EXEC <filename>`
+2. Name Server verifies permissions and Storage Server availability.
+3. Name Server sends `EXEC <inode>` to the Storage Server.
+4. Storage Server returns execution data.
+5. Name Server executes commands using `popen()` and streams output to the client using:
+   - `EXEC|BEGIN`
+   - Output lines
+   - `EXEC|END`
+
+### INFO
+```
+INFO <filename>
+```
+
+**Purpose:**  
+Show metadata about a file, including size, owner, inode, storage server, word/character counts, and timestamps.
+
+**Flow:**
+1. Client → Name Server: `INFO <filename>`
+2. Name Server reads file metadata.
+3. Name Server replies with a Packet containing formatted metadata information.
+
+---
+
+### LIST
+```
+LIST
+```
+
+**Purpose:**  
+List files accessible to the client (short form).
+
+**Flow:**
+1. Client → Name Server: `LIST`
+2. Name Server assembles the accessible file list from metadata.
+3. Returns the list in a Packet response.
+
+---
+
+### LISTCHECKPOINT
+```
+LISTCHECKPOINT <filename> [tag]
+```
+
+**Purpose:**  
+List checkpoint tags and timestamps associated with a file.
+
+**Flow:**
+1. Client → Name Server: `LISTCHECKPOINT <filename> [tag]`
+2. Name Server reads checkpoint metadata for the file.
+3. Returns a structured response containing checkpoint details.
+
+---
+
+### MOVE
+```
+MOVE <filename> <folder>
+```
+
+**Purpose:**  
+Move a file’s metadata under a different folder path.
+
+**Flow:**
+1. Client → Name Server: `MOVE <filename> <folder>`
+2. Name Server validates target folder existence.
+3. Metadata is updated and an `OK` or `ERR` response is returned.
+
+---
+
+### READ
+```
+READ <filename>
+```
+
+**Purpose:**  
+Read the complete contents of a file.
+
+**Flow:**
+1. Client → Name Server: `READ <filename>`
+2. Name Server locates file metadata and the Storage Server holding the inode.
+3. Name Server replies with:
+   ```
+   READ|<filename>|<ss_ip>|<ss_port>|<inode>
+   ```
+4. Client connects directly to the Storage Server and retrieves file content.
+
+---
+
+### REVERT
+```
+REVERT <filename> <tag>
+```
+
+**Purpose:**  
+Restore a file’s contents to a previously created checkpoint.
+
+**Flow:**
+1. Client → Name Server: `REVERT <filename> <tag>`
+2. Name Server instructs the Storage Server to restore checkpoint data.
+3. Metadata is updated and an `OK` or `ERR` response is returned.
+
+---
+
+### REQUESTACCESS
+```
+REQUESTACCESS -R|-W|-RW <filename>
+```
+
+**Purpose:**  
+Request read and/or write permission for a file from its owner.
+
+**Flow:**
+1. Client → Name Server: `REQUESTACCESS <perm> <filename>`
+2. Name Server records the request in `pending_requests` for the file.
+3. Confirmation or error response is returned.
+
+---
+
+### REMACCESS
+```
+REMACCESS <filename> <clientname>
+```
+
+**Purpose:**  
+Remove a client’s access permissions for a file.
+
+**Flow:**
+1. Client → Name Server: `REMACCESS <filename> <clientname>`
+2. Name Server verifies ownership.
+3. Permission entry is removed and an `OK` or `ERR` response is returned.
+
+---
+
+### STREAM
+```
+STREAM <filename>
+```
+
+**Purpose:**  
+Stream file contents to the client.
+
+**Flow:**
+1. Client → Name Server: `STREAM <filename>`
+2. Name Server provides Storage Server location and inode.
+3. Client connects to the Storage Server and receives streamed content.
+
+---
+
+### UNDO
+```
+UNDO <filename>
+```
+
+**Purpose:**  
+Rollback the most recent change made to a file.
+
+**Flow:**
+1. Client → Name Server: `UNDO <filename>`
+2. Name Server coordinates with the Storage Server to restore previous content state.
+3. Client receives confirmation or error response.
 
 ## StorageServer protocol (Nameserver -> StorageServer)
 
