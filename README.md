@@ -132,11 +132,9 @@ When the Nameserver needs file content operations it opens a control channel to 
 
 ## Error Handling  
 All error responses from the Nameserver use the ERR|<CODE>|<DETAIL> convention defined in `error_codes.h`.
-
 ## Commands(alphabetical order)
-
 ### ADDACCESS
-```
+``` sh
 ADDACCESS <permission> <filename> <clientname>
 ```
 **Note:** Permission must be either `R` or `W` (no `RW`).
@@ -154,7 +152,7 @@ Grant a user explicit read or write permission on a file.
 ---
 
 ### APPROVE
-```
+``` sh
 APPROVE <filename> <username> <permission>
 ```
 **Purpose:**  
@@ -166,7 +164,7 @@ Approve a pending access request made by another user.
 ---
 
 ### CHECKPOINT
-```
+``` sh
 CHECKPOINT <filename> <tag>
 ```
 **Purpose:**  
