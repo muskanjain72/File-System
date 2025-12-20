@@ -142,9 +142,7 @@ ADDACCESS <permission> <filename> <clientname>
 ```
 
 - Note:Permission must be either `R` or `W` (no `RW`).
-
 - Purpose: Grant a user explicit read or write permission on a file.
-
 - Flow: 
 1. Client → Name Server:  
    `Packet.msg = "ADDACCESS <perm> <filename> <clientname>"`
