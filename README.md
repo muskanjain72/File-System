@@ -155,7 +155,7 @@ ADDACCESS <permission> <filename> <clientname>
 ---
 
 ### APPROVE
-``` sh
+``` 
 APPROVE <filename> <username> <permission>
 ```
 **Purpose:**  
@@ -167,7 +167,7 @@ Approve a pending access request made by another user.
 ---
 
 ### CHECKPOINT
-``` sh
+``` 
 CHECKPOINT <filename> <tag>
 ```
 **Purpose:**  
