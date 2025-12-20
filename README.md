@@ -1,4 +1,3 @@
-++ /home/muskan-jain/Desktop/File-System/README.md
 ## LangOS Document Collaboration — File-System (MVP)
 
 ## 📖 Introduction
@@ -58,8 +57,8 @@ Includes:
 
 ### Build & Run
 ```bash
-git clone <repository_url>
-cd <repository_name>
+git clone git@github.com:muskanjain72/File-System.git
+cd File-System
 make
 ./run_system.sh
 ```
@@ -134,17 +133,15 @@ When the Nameserver needs file content operations it opens a control channel to 
 ## Error Handling  
 All error responses from the Nameserver use the ERR|<CODE>|<DETAIL> convention defined in `error_codes.h`.
 
-
-
 ## Commands(alphabetical order)
 
-- ADDACCESS <permission> <filename> <clientname> (PERMISSION ID EITHER R OR W ..NO RW)
+- ADDACCESS <permission> <filename> <clientname :(PERMISSION ID EITHER R OR W ..NO RW)
 	- Purpose: Grant a user explicit read/write permission on a file.
 	- Flow:
-		1. Client -> Nameserver: Packet.msg = "ADDACCESS <perm> <filename> <clientname>"
-		2. Nameserver validates parameters and existence of file and target client.
-			 - If the file or client doesn't exist, NM returns an error Packet: "ERR|not_found|<filename>" or "ERR|no_such_client|<clientname>".
-		3. If validation passes and the requester is owner, Nameserver updates file metadata and returns OK ("ADDACCESS_OK" backed in logs and reply).
+		1.Client -> Nameserver: Packet.msg = "ADDACCESS <perm> <filename> <clientname>"
+		2.Nameserver validates parameters and existence of file and target client.
+			- If the file or client doesn't exist, NM returns an error Packet: "ERR|not_found|<filename>" or "ERR|no_such_client|<clientname>".
+		3.If validation passes and the requester is owner, Nameserver updates file metadata and returns OK ("ADDACCESS_OK" backed in logs and reply).
 
 - APPROVE <filename> <username> <perm?>
 	- Purpose: Approve a pending access request made by another user.
