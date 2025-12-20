@@ -132,15 +132,20 @@ When the Nameserver needs file content operations it opens a control channel to 
 
 ## Error Handling  
 All error responses from the Nameserver use the ERR|<CODE>|<DETAIL> convention defined in `error_codes.h`.
+
 ## Commands(alphabetical order)
-### ADDACCESS
+
+### ADDACCESS :
+
 ``` sh
 ADDACCESS <permission> <filename> <clientname>
 ```
-**Note:** Permission must be either `R` or `W` (no `RW`).
-**Purpose:**  
-Grant a user explicit read or write permission on a file.
-**Flow:**
+
+- Note:Permission must be either `R` or `W` (no `RW`).
+
+- Purpose: Grant a user explicit read or write permission on a file.
+
+- Flow: 
 1. Client → Name Server:  
    `Packet.msg = "ADDACCESS <perm> <filename> <clientname>"`
 2. Name Server validates parameters and existence of the file and target client.  
