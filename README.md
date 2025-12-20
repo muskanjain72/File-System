@@ -135,30 +135,30 @@ All error responses from the Nameserver use the ERR|<CODE>|<DETAIL> convention d
 
 ## Commands(alphabetical order)
 
-### ADDACCESS :
-
-``` sh
+## ADDACCESS :Grant a user explicit read/write permission on a file.
+- Usage :
+``` 
 ADDACCESS <permission> <filename> <clientname>
 ```
-
 - Note:Permission must be either `R` or `W` (no `RW`).
 - Purpose: Grant a user explicit read or write permission on a file.
 - Flow: 
-1. Client → Name Server:  
+    1. Client → Name Server:  
    `Packet.msg = "ADDACCESS <perm> <filename> <clientname>"`
-2. Name Server validates parameters and existence of the file and target client.  
-   - If the file does not exist:  
-     `ERR|not_found|<filename>`
-   - If the client does not exist:  
-     `ERR|no_such_client|<clientname>`
-3. If validation passes and the requester is the owner, the Name Server updates file metadata and responds with `ADDACCESS_OK`.
----
+    2. Name Server validates parameters and existence of the file and target client.  
+    - If the file does not exist:  
+    `ERR|not_found|<filename>`
+    - If the client does not exist:  
+    `ERR|no_such_client|<clientname>`
+    3. If validation passes and the requester is the owner, the Name Server updates file metadata and responds with `ADDACCESS_OK`.
+<br>
 
-### APPROVE
+## APPROVE : Approve a pending access request made by another user.
+- Usage:
 ``` 
 APPROVE <filename> <username> <permission>
 ```
-**Purpose:**  
+ 
 Approve a pending access request made by another user.
 **Flow:**
 1. Client → Name Server: `APPROVE <filename> <username> <permission>`
