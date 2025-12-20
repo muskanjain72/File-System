@@ -1,0 +1,23 @@
+Enter server IP to bind: Enter server port to bind: Server listening on 127.0.0.1:8000
+Storage Server connected: ID=0, IP=127.0.0.1, Port=9000, Used=0
+=== Connected Storage Servers ===
+ID: 0, IP: 127.0.0.1, Port: 9000, UsedBytes: 0
+===============================
+Client connected: ID=0, Name=M, IP=127.0.0.1, Port=46372
+=== Connected Clients ===
+ID: 0, Name: M, IP: 127.0.0.1, Port: 46372
+=========================
+Assigned Client ID: 0
+Create function called!
+check_cache: looking for 'test_exec.txt' in cache (count=0)
+check_cache: 'test_exec.txt' not found in cache
+create: allocated FileMeta 0x7c5dbc000be0 assigned to files[0]
+✅ File 'test_exec.txt' assigned to Storage Server 0 (used_bytes=0)
+📁 File created: test_exec.txt (inode 0)
+[DEBUG] inserting 'test_exec.txt' ptr=0x7c5dbc000be0 at hash[786]
+Inserted file 'test_exec.txt' into hash table (inode=0 ptr=0x7c5dbc000be0).
+add_to_cache: cached ptr 0x7c5dbc000be0 for 'test_exec.txt' at cache[0]
+Added file 'test_exec.txt' to cache (ptr=0x7c5dbc000be0).
+📤 Sent create request to storage 0: CREATE 0/0.txt
+[M]: CREATE
+sh: 1: Syntax error: end of file unexpected

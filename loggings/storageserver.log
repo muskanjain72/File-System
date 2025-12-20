@@ -1,0 +1,1906 @@
+[2025-11-19 00:48:13] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-19 00:48:18] CLIENT_LISTENER start port=8008
+[2025-11-19 00:49:22] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 00:49:27] CLIENT_LISTENER start port=8008
+[2025-11-19 00:49:32] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 00:49:32] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 00:49:32] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 00:49:32] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 00:49:49] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 00:49:49] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 00:49:49] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 00:49:49] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 00:49:55] CLIENT_ACCEPT fd=5
+[2025-11-19 00:49:55] CLIENT_CONNECT fd=5
+[2025-11-19 00:49:55] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 00:49:55] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 00:49:55] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 00:49:55] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 00:50:06] CLIENT_ACCEPT fd=6
+[2025-11-19 00:50:06] CLIENT_CONNECT fd=6
+[2025-11-19 00:50:06] CLIENT_CMD fd=6 cmd="READ 1"
+[2025-11-19 00:50:06] READ_START inode=1 filepath=0/1.txt by_fd=6
+[2025-11-19 00:50:06] READ_SEND filepath=0/1.txt to_fd=6
+[2025-11-19 00:50:06] READ_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-19 00:50:23] CLIENT_ACCEPT fd=5
+[2025-11-19 00:50:23] CLIENT_CONNECT fd=5
+[2025-11-19 00:50:23] CLIENT_CMD fd=5 cmd="STREAM 1"
+[2025-11-19 00:50:23] STREAM_REQUEST inode=1 filepath=0/1.txt from_fd=5
+[2025-11-19 00:50:51] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-19 00:50:56] CLIENT_LISTENER start port=8888
+[2025-11-19 02:06:11] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:06:16] CLIENT_LISTENER start port=9000
+[2025-11-19 02:06:30] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:06:30] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:06:30] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:06:30] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:06:35] CLIENT_ACCEPT fd=5
+[2025-11-19 02:06:35] CLIENT_CONNECT fd=5
+[2025-11-19 02:06:35] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:06:35] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:06:35] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:06:35] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:06:56] CLIENT_ACCEPT fd=6
+[2025-11-19 02:06:56] CLIENT_CONNECT fd=6
+[2025-11-19 02:06:56] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-19 02:06:56] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-19 02:06:56] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-19 02:06:56] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-19 02:07:01] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-19 02:07:01] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 02:07:01] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 02:07:06] CLIENT_ACCEPT fd=5
+[2025-11-19 02:07:06] CLIENT_CONNECT fd=5
+[2025-11-19 02:07:06] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:07:06] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:07:06] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:07:06] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:08:24] DIR_DELETED path=0
+[2025-11-19 02:08:45] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:08:49] CLIENT_LISTENER start port=9000
+[2025-11-19 02:08:58] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:08:58] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:08:58] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:08:58] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:09:09] DIR_DELETED path=0
+[2025-11-19 02:12:39] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:12:42] CLIENT_LISTENER start port=9000
+[2025-11-19 02:12:54] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:12:54] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:12:54] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:12:54] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:12:58] CLIENT_ACCEPT fd=5
+[2025-11-19 02:12:58] CLIENT_CONNECT fd=5
+[2025-11-19 02:12:58] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:12:58] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:12:58] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:12:58] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:13:08] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 02:15:21] DIR_DELETED path=0
+[2025-11-19 02:15:55] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:15:59] CLIENT_LISTENER start port=9000
+[2025-11-19 02:16:10] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:16:10] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:16:10] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:16:10] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:16:14] CLIENT_ACCEPT fd=5
+[2025-11-19 02:16:14] CLIENT_CONNECT fd=5
+[2025-11-19 02:16:14] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:16:14] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:16:14] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:16:14] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:16:27] MKDIR_TOUCH_OK path=0/0_1.txt.chk
+[2025-11-19 02:16:56] MKDIR_TOUCH_OK path=0/0_1.txt.chk
+[2025-11-19 02:17:06] DIR_DELETED path=0
+[2025-11-19 02:19:41] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:19:44] CLIENT_LISTENER start port=9000
+[2025-11-19 02:19:54] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:19:54] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:19:54] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:19:54] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:20:01] CLIENT_ACCEPT fd=5
+[2025-11-19 02:20:01] CLIENT_CONNECT fd=5
+[2025-11-19 02:20:01] CLIENT_CMD fd=5 cmd="CHECKPOINT 0 1"
+[2025-11-19 02:20:01] MKDIR_TOUCH_OK path=0/0_1.txt.chk
+[2025-11-19 02:20:01] CLIENT_CHECKPOINT_OK inode=0 dest=0/0_1.txt.chk
+[2025-11-19 02:20:25] DIR_DELETED path=0
+[2025-11-19 02:24:53] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:24:57] CLIENT_LISTENER start port=9000
+[2025-11-19 02:25:07] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:25:07] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:25:07] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:25:07] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:25:12] CLIENT_ACCEPT fd=5
+[2025-11-19 02:25:12] CLIENT_CONNECT fd=5
+[2025-11-19 02:25:12] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:25:12] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:25:12] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:25:12] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:25:24] CLIENT_ACCEPT fd=6
+[2025-11-19 02:25:24] CLIENT_CONNECT fd=6
+[2025-11-19 02:25:24] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-19 02:25:24] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-19 02:25:24] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-19 02:25:28] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-19 02:25:28] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 02:25:28] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 02:25:31] CLIENT_ACCEPT fd=5
+[2025-11-19 02:25:31] CLIENT_CONNECT fd=5
+[2025-11-19 02:25:31] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:25:31] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:25:31] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:25:31] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:25:44] MKDIR_TOUCH_OK path=0/0_1.txt.chk
+[2025-11-19 02:26:06] MKDIR_TOUCH_OK path=0/0_1.txt.chk
+[2025-11-19 02:32:18] DIR_DELETED path=0
+[2025-11-19 02:34:20] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:34:25] CLIENT_LISTENER start port=9000
+[2025-11-19 02:34:38] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:34:38] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:34:38] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:34:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:34:49] CLIENT_ACCEPT fd=5
+[2025-11-19 02:34:49] CLIENT_CONNECT fd=5
+[2025-11-19 02:34:49] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-19 02:34:49] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-19 02:34:49] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-19 02:34:53] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-19 02:34:53] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 02:34:53] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 02:34:58] CLIENT_ACCEPT fd=6
+[2025-11-19 02:34:58] CLIENT_CONNECT fd=6
+[2025-11-19 02:34:58] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-19 02:34:58] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-19 02:34:58] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-19 02:34:58] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-19 02:35:11] MKDIR_TOUCH_OK path=0/0_1.txt.chk
+[2025-11-19 02:36:25] DIR_DELETED path=0
+[2025-11-19 02:36:49] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:36:53] CLIENT_LISTENER start port=9000
+[2025-11-19 02:37:07] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:37:07] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:37:07] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:37:07] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:37:11] CLIENT_ACCEPT fd=5
+[2025-11-19 02:37:11] CLIENT_CONNECT fd=5
+[2025-11-19 02:37:11] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 02:37:11] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 02:37:11] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 02:37:11] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 02:37:26] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 02:41:22] DIR_DELETED path=0
+[2025-11-19 02:41:42] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:41:47] CLIENT_LISTENER start port=9000
+[2025-11-19 02:42:00] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:42:00] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:42:00] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:42:00] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:42:18] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 02:54:39] DIR_DELETED path=0
+[2025-11-19 02:54:58] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:55:02] CLIENT_LISTENER start port=9000
+[2025-11-19 02:55:17] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:55:17] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:55:17] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:55:17] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:55:35] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 02:57:58] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-19 02:58:35] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 02:58:40] CLIENT_LISTENER start port=9000
+[2025-11-19 02:58:52] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 02:58:52] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 02:58:52] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 02:58:52] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 02:59:04] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 03:09:47] DIR_DELETED path=0
+[2025-11-19 03:25:54] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 03:25:58] CLIENT_LISTENER start port=9000
+[2025-11-19 03:26:07] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 03:26:07] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 03:26:07] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 03:26:07] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 03:26:12] CLIENT_ACCEPT fd=5
+[2025-11-19 03:26:12] CLIENT_CONNECT fd=5
+[2025-11-19 03:26:12] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 03:26:12] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 03:26:12] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 03:26:12] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 03:26:19] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 03:28:39] DIR_DELETED path=0
+[2025-11-19 03:29:03] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 03:29:07] CLIENT_LISTENER start port=9000
+[2025-11-19 03:29:17] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 03:29:17] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 03:29:17] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 03:29:17] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 03:29:42] MKDIR_TOUCH_OK path=0/0_9.txt.chk
+[2025-11-19 03:31:17] DIR_DELETED path=0
+[2025-11-19 03:31:39] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 03:31:45] CLIENT_LISTENER start port=9000
+[2025-11-19 03:31:56] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 03:31:56] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 03:31:56] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 03:31:56] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 03:32:02] MKDIR_TOUCH_OK path=0/0_5.txt.chk
+[2025-11-19 04:07:17] DIR_DELETED path=0
+[2025-11-19 04:10:58] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 04:11:02] CLIENT_LISTENER start port=9000
+[2025-11-19 04:11:12] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 04:11:12] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 04:11:12] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 04:11:12] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 04:11:20] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 04:12:55] DIR_DELETED path=0
+[2025-11-19 04:13:12] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 04:13:16] CLIENT_LISTENER start port=9000
+[2025-11-19 04:13:27] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 04:13:27] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 04:13:27] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 04:13:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 04:13:33] MKDIR_TOUCH_OK path=0/0_6.txt.chk
+[2025-11-19 04:13:44] DIR_DELETED path=0
+[2025-11-19 04:13:59] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 04:14:05] CLIENT_LISTENER start port=9000
+[2025-11-19 04:14:16] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 04:14:16] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 04:14:16] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 04:14:16] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 04:14:26] MKDIR_TOUCH_OK path=0/0_8.txt.chk
+[2025-11-19 04:14:56] DIR_DELETED path=0
+[2025-11-19 04:19:12] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 04:19:16] CLIENT_LISTENER start port=9000
+[2025-11-19 04:19:26] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 04:19:26] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 04:19:26] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 04:19:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 04:19:30] CLIENT_ACCEPT fd=5
+[2025-11-19 04:19:30] CLIENT_CONNECT fd=5
+[2025-11-19 04:19:30] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 04:19:30] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 04:19:30] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 04:19:30] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 04:19:43] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 04:20:22] CLIENT_ACCEPT fd=6
+[2025-11-19 04:20:22] CLIENT_CONNECT fd=6
+[2025-11-19 04:20:22] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-19 04:20:22] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-19 04:20:22] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-19 04:20:26] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-19 04:20:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 04:20:26] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 04:20:31] CLIENT_ACCEPT fd=5
+[2025-11-19 04:20:31] CLIENT_CONNECT fd=5
+[2025-11-19 04:20:31] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 04:20:31] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 04:20:31] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 04:20:31] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 04:20:44] MKDIR_TOUCH_OK path=0/0_3.txt.chk
+[2025-11-19 04:30:22] DIR_DELETED path=0
+[2025-11-19 04:30:51] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 04:30:55] CLIENT_LISTENER start port=9000
+[2025-11-19 04:31:05] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 04:31:05] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 04:31:05] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 04:31:05] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 04:31:21] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 04:31:34] DIR_DELETED path=0
+[2025-11-19 05:13:32] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:13:37] CLIENT_LISTENER start port=9000
+[2025-11-19 05:13:47] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:13:47] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:13:47] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:13:47] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:13:57] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:14:28] CLIENT_ACCEPT fd=5
+[2025-11-19 05:14:28] CLIENT_CONNECT fd=5
+[2025-11-19 05:14:28] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:14:28] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 05:14:28] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 05:14:28] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 05:14:47] CLIENT_ACCEPT fd=6
+[2025-11-19 05:14:47] CLIENT_CONNECT fd=6
+[2025-11-19 05:14:47] CLIENT_CMD fd=6 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:14:47] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-19 05:14:47] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-19 05:14:47] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-19 05:16:36] DIR_DELETED path=0
+[2025-11-19 05:16:57] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:17:01] CLIENT_LISTENER start port=9000
+[2025-11-19 05:17:11] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:17:11] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:17:11] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:17:11] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:17:19] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:17:28] CLIENT_ACCEPT fd=5
+[2025-11-19 05:17:28] CLIENT_CONNECT fd=5
+[2025-11-19 05:17:28] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:17:28] READ_SEND filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:17:28] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:17:47] CLIENT_ACCEPT fd=6
+[2025-11-19 05:17:47] CLIENT_CONNECT fd=6
+[2025-11-19 05:17:47] CLIENT_CMD fd=6 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:17:47] READ_SEND filepath=0/0_0.txt.chk to_fd=6
+[2025-11-19 05:17:47] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=6
+[2025-11-19 05:17:55] DIR_DELETED path=0
+[2025-11-19 05:20:10] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:20:17] CLIENT_LISTENER start port=9000
+[2025-11-19 05:20:26] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:20:26] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:20:26] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:20:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:20:39] MKDIR_TOUCH_OK path=0/0_8.txt.chk
+[2025-11-19 05:20:46] CLIENT_ACCEPT fd=5
+[2025-11-19 05:20:46] CLIENT_CONNECT fd=5
+[2025-11-19 05:20:46] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_8.txt.chk"
+[2025-11-19 05:20:46] READ_SEND filepath=0/0_8.txt.chk to_fd=5
+[2025-11-19 05:20:46] READ_CHECKPOINT_SENT filepath=0/0_8.txt.chk to_fd=5
+[2025-11-19 05:20:52] CLIENT_ACCEPT fd=6
+[2025-11-19 05:20:52] CLIENT_CONNECT fd=6
+[2025-11-19 05:20:52] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-19 05:20:52] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-19 05:20:52] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-19 05:20:57] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-19 05:20:57] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 05:20:57] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 05:20:59] CLIENT_ACCEPT fd=5
+[2025-11-19 05:20:59] CLIENT_CONNECT fd=5
+[2025-11-19 05:20:59] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 05:20:59] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 05:20:59] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 05:20:59] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 05:21:08] CLIENT_ACCEPT fd=6
+[2025-11-19 05:21:08] CLIENT_CONNECT fd=6
+[2025-11-19 05:21:08] CLIENT_CMD fd=6 cmd="READ_CHECKPOINT 0/0_8.txt.chk"
+[2025-11-19 05:21:08] READ_SEND filepath=0/0_8.txt.chk to_fd=6
+[2025-11-19 05:21:08] READ_CHECKPOINT_SENT filepath=0/0_8.txt.chk to_fd=6
+[2025-11-19 05:21:14] MKDIR_TOUCH_OK path=0/0_9.txt.chk
+[2025-11-19 05:21:33] CLIENT_ACCEPT fd=5
+[2025-11-19 05:21:33] CLIENT_CONNECT fd=5
+[2025-11-19 05:21:33] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_9.txt.chk"
+[2025-11-19 05:21:33] READ_SEND filepath=0/0_9.txt.chk to_fd=5
+[2025-11-19 05:21:33] READ_CHECKPOINT_SENT filepath=0/0_9.txt.chk to_fd=5
+[2025-11-19 05:21:41] DIR_DELETED path=0
+[2025-11-19 05:40:57] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:41:01] CLIENT_LISTENER start port=9000
+[2025-11-19 05:41:23] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:41:23] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:41:23] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:41:23] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:41:31] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:41:51] CLIENT_ACCEPT fd=5
+[2025-11-19 05:41:51] CLIENT_CONNECT fd=5
+[2025-11-19 05:41:51] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:41:51] READ_SEND filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:41:51] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:43:17] DIR_DELETED path=0
+[2025-11-19 05:43:45] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:43:54] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:44:13] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:44:16] CLIENT_LISTENER start port=9000
+[2025-11-19 05:44:41] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:44:41] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:44:41] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:44:41] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:44:54] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:45:14] CLIENT_ACCEPT fd=5
+[2025-11-19 05:45:14] CLIENT_CONNECT fd=5
+[2025-11-19 05:45:14] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:45:14] READ_SEND filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:45:14] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:45:19] CLIENT_ACCEPT fd=6
+[2025-11-19 05:45:19] CLIENT_CONNECT fd=6
+[2025-11-19 05:45:19] CLIENT_CMD fd=6 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 05:45:19] REVERT_START filepath=0 to_fd=6
+[2025-11-19 05:45:19] REVERT_SENT filepath=0 to_fd=6
+[2025-11-19 05:45:27] CLIENT_ACCEPT fd=5
+[2025-11-19 05:45:27] CLIENT_CONNECT fd=5
+[2025-11-19 05:45:27] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 05:45:27] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 05:45:27] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 05:45:27] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 05:47:16] DIR_DELETED path=0
+[2025-11-19 05:47:35] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:47:39] CLIENT_LISTENER start port=9000
+[2025-11-19 05:47:57] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:47:57] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:47:57] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:47:57] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:48:04] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:48:29] CLIENT_ACCEPT fd=5
+[2025-11-19 05:48:29] CLIENT_CONNECT fd=5
+[2025-11-19 05:48:29] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-19 05:48:29] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-19 05:48:29] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-19 05:48:29] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-19 05:48:47] CLIENT_ACCEPT fd=6
+[2025-11-19 05:48:47] CLIENT_CONNECT fd=6
+[2025-11-19 05:48:47] CLIENT_CMD fd=6 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:48:47] READ_SEND filepath=0/0_0.txt.chk to_fd=6
+[2025-11-19 05:48:47] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=6
+[2025-11-19 05:48:53] CLIENT_ACCEPT fd=5
+[2025-11-19 05:48:53] CLIENT_CONNECT fd=5
+[2025-11-19 05:48:53] CLIENT_CMD fd=5 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 05:48:53] REVERT_START filepath=REVERT to_fd=5
+[2025-11-19 05:48:53] REVERT_FAIL filepath=REVERT to_fd=5
+[2025-11-19 05:49:54] DIR_DELETED path=0
+[2025-11-19 05:51:14] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:51:17] CLIENT_LISTENER start port=9000
+[2025-11-19 05:51:26] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:51:26] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:51:26] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:51:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:51:31] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:51:43] CLIENT_ACCEPT fd=5
+[2025-11-19 05:51:43] CLIENT_CONNECT fd=5
+[2025-11-19 05:51:43] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:51:43] READ_SEND filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:51:43] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:51:57] CLIENT_ACCEPT fd=6
+[2025-11-19 05:51:57] CLIENT_CONNECT fd=6
+[2025-11-19 05:51:57] CLIENT_CMD fd=6 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 05:51:57] REVERT_CHKPT_NOT_EXIST filepath=REVERT to_fd=6
+[2025-11-19 05:52:52] DIR_DELETED path=0
+[2025-11-19 05:53:12] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:53:24] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 05:53:27] CLIENT_LISTENER start port=9001
+[2025-11-19 05:53:38] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 05:53:38] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 05:53:38] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 05:53:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 05:53:44] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 05:54:05] CLIENT_ACCEPT fd=5
+[2025-11-19 05:54:05] CLIENT_CONNECT fd=5
+[2025-11-19 05:54:05] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 0/0_0.txt.chk"
+[2025-11-19 05:54:05] READ_SEND filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:54:05] READ_CHECKPOINT_SENT filepath=0/0_0.txt.chk to_fd=5
+[2025-11-19 05:54:10] CLIENT_ACCEPT fd=6
+[2025-11-19 05:54:10] CLIENT_CONNECT fd=6
+[2025-11-19 05:54:10] CLIENT_CMD fd=6 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 05:54:10] REVERT_CHKPT_NOT_EXIST filepath=REVERT to_fd=6
+[2025-11-19 05:58:11] DIR_DELETED path=0
+[2025-11-19 06:00:13] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 06:00:16] CLIENT_LISTENER start port=9000
+[2025-11-19 06:00:25] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 06:00:25] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 06:00:25] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 06:00:25] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 06:00:34] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 06:00:39] CLIENT_ACCEPT fd=5
+[2025-11-19 06:00:39] CLIENT_CONNECT fd=5
+[2025-11-19 06:00:39] CLIENT_CMD fd=5 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 06:00:39] REVERT_START filepath=0/0.txt to_fd=5
+[2025-11-19 06:00:39] REVERT_SENT filepath=0/0.txt to_fd=5
+[2025-11-19 06:01:09] CLIENT_ACCEPT fd=6
+[2025-11-19 06:01:09] CLIENT_CONNECT fd=6
+[2025-11-19 06:01:09] CLIENT_CMD fd=6 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 06:01:09] REVERT_START filepath=0/0.txt to_fd=6
+[2025-11-19 06:01:09] REVERT_SENT filepath=0/0.txt to_fd=6
+[2025-11-19 06:01:48] DIR_DELETED path=0
+[2025-11-19 06:02:06] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 06:02:11] CLIENT_LISTENER start port=9001
+[2025-11-19 06:02:19] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 06:02:19] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 06:02:19] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 06:02:19] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 06:02:29] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 06:02:37] DIR_DELETED path=0
+[2025-11-19 06:02:50] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 06:02:54] CLIENT_LISTENER start port=9002
+[2025-11-19 06:03:01] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 06:03:01] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 06:03:01] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 06:03:01] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 06:03:06] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-19 06:03:20] CLIENT_ACCEPT fd=5
+[2025-11-19 06:03:20] CLIENT_CONNECT fd=5
+[2025-11-19 06:03:20] CLIENT_CMD fd=5 cmd="REVERT 0/0_0.txt.chk"
+[2025-11-19 06:03:20] REVERT_START filepath=0/0.txt to_fd=5
+[2025-11-19 06:03:20] REVERT_SENT filepath=0/0.txt to_fd=5
+[2025-11-19 06:03:26] DIR_DELETED path=0
+[2025-11-19 14:49:11] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 14:49:16] CLIENT_LISTENER start port=8008
+[2025-11-19 14:49:32] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 14:49:32] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 14:49:32] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 14:49:32] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 14:49:40] CLIENT_ACCEPT fd=5
+[2025-11-19 14:49:40] CLIENT_CONNECT fd=5
+[2025-11-19 14:49:40] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-19 14:49:40] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-19 14:49:40] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-19 14:50:38] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=25
+[2025-11-19 14:50:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 14:50:38] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 14:50:47] CLIENT_ACCEPT fd=6
+[2025-11-19 14:50:47] CLIENT_CONNECT fd=6
+[2025-11-19 14:50:47] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-19 14:50:47] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-19 14:50:47] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-19 14:50:47] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-19 14:52:52] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 14:52:52] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 14:52:52] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 14:52:52] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 14:52:56] CLIENT_ACCEPT fd=5
+[2025-11-19 14:52:56] CLIENT_CONNECT fd=5
+[2025-11-19 14:52:56] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-19 14:52:56] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-19 14:52:56] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-19 14:53:09] WRITE_RECV_FAIL filepath=0/1.txt sentence=1 err=peer_closed
+[2025-11-19 14:53:09] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 14:53:09] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-19 14:54:23] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 14:54:23] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 14:54:23] INODE_ADD ss_id=0 inode=0 slot=2
+[2025-11-19 14:54:23] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-19 14:55:09] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 14:55:09] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 14:55:09] INODE_ADD ss_id=0 inode=1 slot=3
+[2025-11-19 14:55:09] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=4
+[2025-11-19 14:58:50] DIR_DELETED path=0
+[2025-11-19 15:05:34] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 15:05:41] CLIENT_LISTENER start port=8008
+[2025-11-19 15:06:01] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 15:06:01] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 15:06:01] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 15:06:01] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 15:06:07] CLIENT_ACCEPT fd=5
+[2025-11-19 15:06:07] CLIENT_CONNECT fd=5
+[2025-11-19 15:06:07] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-19 15:06:07] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-19 15:06:07] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-19 15:06:15] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=12
+[2025-11-19 15:06:15] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 15:06:15] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 15:06:21] CLIENT_ACCEPT fd=6
+[2025-11-19 15:06:21] CLIENT_CONNECT fd=6
+[2025-11-19 15:06:21] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-19 15:06:21] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-19 15:06:21] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-19 15:06:21] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-19 15:07:32] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 15:07:32] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 15:07:32] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 15:07:32] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 15:07:38] CLIENT_ACCEPT fd=5
+[2025-11-19 15:07:38] CLIENT_CONNECT fd=5
+[2025-11-19 15:07:38] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-19 15:07:38] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-19 15:07:38] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-19 15:07:47] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=5
+[2025-11-19 15:07:47] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 15:07:47] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-19 15:09:20] DIR_DELETED path=0
+[2025-11-19 17:24:04] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 17:25:18] CLIENT_LISTENER start port=8888
+[2025-11-19 17:27:21] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 17:27:21] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 17:27:21] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 17:27:21] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 17:27:26] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 17:27:26] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 17:27:26] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 17:27:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 17:28:51] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-19 17:28:51] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-19 17:28:51] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-19 17:28:51] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-19 17:29:53] CLIENT_ACCEPT fd=5
+[2025-11-19 17:29:53] CLIENT_CONNECT fd=5
+[2025-11-19 17:29:53] CLIENT_CMD fd=5 cmd="WRITE 2 0"
+[2025-11-19 17:29:53] WRITE_REQUEST inode=2 filepath=0/2.txt from_fd=5 sentence=0
+[2025-11-19 17:29:53] SENTENCE_RETRIEVED filepath=0/2.txt sentence=1 to_fd=5
+[2025-11-19 17:30:06] WRITE_APPLIED filepath=0/2.txt sentence=1 delta=5
+[2025-11-19 17:30:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 17:30:06] WRITE_COMPLETED inode=2 filepath=0/2.txt
+[2025-11-19 17:30:21] CLIENT_ACCEPT fd=6
+[2025-11-19 17:30:21] CLIENT_CONNECT fd=6
+[2025-11-19 17:30:21] CLIENT_CMD fd=6 cmd="READ 2"
+[2025-11-19 17:30:21] READ_START inode=2 filepath=0/2.txt by_fd=6
+[2025-11-19 17:30:21] READ_SEND filepath=0/2.txt to_fd=6
+[2025-11-19 17:30:21] READ_SENT inode=2 filepath=0/2.txt to_fd=6
+[2025-11-19 17:30:29] EXEC_SENT filepath=0/2.txt to_nm_fd=3
+[2025-11-19 17:30:49] DIR_DELETED path=0
+[2025-11-19 17:33:06] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 17:33:16] CLIENT_LISTENER start port=8888
+[2025-11-19 17:33:22] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 17:33:22] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 17:33:22] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 17:33:22] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 17:33:27] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 17:33:27] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 17:33:27] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 17:33:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 17:35:44] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-19 17:35:44] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-19 17:35:44] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-19 17:35:44] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-19 17:35:52] CLIENT_ACCEPT fd=5
+[2025-11-19 17:35:52] CLIENT_CONNECT fd=5
+[2025-11-19 17:35:52] CLIENT_CMD fd=5 cmd="WRITE 2 0"
+[2025-11-19 17:35:52] WRITE_REQUEST inode=2 filepath=0/2.txt from_fd=5 sentence=0
+[2025-11-19 17:35:52] SENTENCE_RETRIEVED filepath=0/2.txt sentence=1 to_fd=5
+[2025-11-19 17:36:05] WRITE_APPLIED filepath=0/2.txt sentence=1 delta=5
+[2025-11-19 17:36:05] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 17:36:05] WRITE_COMPLETED inode=2 filepath=0/2.txt
+[2025-11-19 17:41:55] DIR_DELETED path=0
+[2025-11-19 17:42:52] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 17:42:59] CLIENT_LISTENER start port=8888
+[2025-11-19 17:43:17] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 17:43:17] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 17:43:17] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 17:43:17] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 17:43:22] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 17:43:22] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 17:43:22] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 17:43:22] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 17:43:46] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-19 17:43:46] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-19 17:43:46] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-19 17:43:46] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-19 17:46:14] DIR_DELETED path=0
+[2025-11-19 17:46:49] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 17:46:55] CLIENT_LISTENER start port=8888
+[2025-11-19 17:47:23] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 17:47:23] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 17:47:23] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 17:47:23] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 17:47:27] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 17:47:27] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 17:47:27] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 17:47:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 17:48:03] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-19 17:48:03] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-19 17:48:03] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-19 17:48:03] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-19 17:51:47] CLIENT_ACCEPT fd=5
+[2025-11-19 17:51:47] CLIENT_CONNECT fd=5
+[2025-11-19 17:51:47] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-19 17:51:47] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-19 17:51:47] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-19 17:52:36] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=18
+[2025-11-19 17:52:36] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 17:52:36] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 17:58:44] CLIENT_ACCEPT fd=6
+[2025-11-19 17:58:44] CLIENT_CONNECT fd=6
+[2025-11-19 17:58:44] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-19 17:58:44] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-19 17:58:44] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-19 17:58:44] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-19 17:59:05] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-19 17:59:47] DIR_DELETED path=0
+[2025-11-19 18:12:26] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 18:12:33] CLIENT_LISTENER start port=8888
+[2025-11-19 18:12:58] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 18:13:03] CLIENT_LISTENER start port=8008
+[2025-11-19 18:14:50] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 18:14:50] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 18:14:50] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 18:14:50] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 18:14:55] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 18:14:55] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 18:14:55] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 18:14:55] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 18:15:07] CLIENT_ACCEPT fd=5
+[2025-11-19 18:15:07] CLIENT_CONNECT fd=5
+[2025-11-19 18:15:07] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-19 18:15:07] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-19 18:15:07] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-19 18:15:38] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=21
+[2025-11-19 18:15:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 18:15:38] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-19 18:15:54] CLIENT_ACCEPT fd=6
+[2025-11-19 18:15:54] CLIENT_CONNECT fd=6
+[2025-11-19 18:15:54] CLIENT_CMD fd=6 cmd="READ 1"
+[2025-11-19 18:15:54] READ_START inode=1 filepath=0/1.txt by_fd=6
+[2025-11-19 18:15:54] READ_SEND filepath=0/1.txt to_fd=6
+[2025-11-19 18:15:54] READ_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-19 18:16:51] MKDIR_TOUCH_OK path=1/2.txt
+[2025-11-19 18:16:51] MKDIR_TOUCH_OK path=1/2.txt.bak
+[2025-11-19 18:16:51] INODE_ADD ss_id=1 inode=2 slot=0
+[2025-11-19 18:16:51] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1
+[2025-11-19 18:17:01] MKDIR_TOUCH_OK path=1/3.txt
+[2025-11-19 18:17:01] MKDIR_TOUCH_OK path=1/3.txt.bak
+[2025-11-19 18:17:01] INODE_ADD ss_id=1 inode=3 slot=1
+[2025-11-19 18:17:01] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=2
+[2025-11-19 18:17:08] MKDIR_TOUCH_OK path=1/4.txt
+[2025-11-19 18:17:08] MKDIR_TOUCH_OK path=1/4.txt.bak
+[2025-11-19 18:17:08] INODE_ADD ss_id=1 inode=4 slot=2
+[2025-11-19 18:17:08] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=3
+[2025-11-19 18:17:27] CLIENT_ACCEPT fd=5
+[2025-11-19 18:17:27] CLIENT_CONNECT fd=5
+[2025-11-19 18:17:27] CLIENT_CMD fd=5 cmd="WRITE 4 0"
+[2025-11-19 18:17:27] WRITE_REQUEST inode=4 filepath=1/4.txt from_fd=5 sentence=0
+[2025-11-19 18:17:27] SENTENCE_RETRIEVED filepath=1/4.txt sentence=1 to_fd=5
+[2025-11-19 18:17:53] WRITE_APPLIED filepath=1/4.txt sentence=1 delta=271
+[2025-11-19 18:17:53] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1024
+[2025-11-19 18:17:53] WRITE_COMPLETED inode=4 filepath=1/4.txt
+[2025-11-19 18:21:53] CLIENT_ACCEPT fd=6
+[2025-11-19 18:21:53] CLIENT_CONNECT fd=6
+[2025-11-19 18:21:53] CLIENT_CMD fd=6 cmd="WRITE 4 0"
+[2025-11-19 18:21:53] WRITE_REQUEST inode=4 filepath=1/4.txt from_fd=6 sentence=0
+[2025-11-19 18:21:53] BACKUP_PATH src=1/4.txt backup=1/4.txt.bak
+[2025-11-19 18:21:53] SENTENCE_RETRIEVED filepath=1/4.txt sentence=1 to_fd=6
+[2025-11-19 18:22:11] WRITE_APPLIED filepath=1/4.txt sentence=1 delta=45
+[2025-11-19 18:22:11] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1024
+[2025-11-19 18:22:11] WRITE_COMPLETED inode=4 filepath=1/4.txt
+[2025-11-19 18:22:16] CLIENT_CONNECT fd=5
+[2025-11-19 18:22:16] CLIENT_ACCEPT fd=1521172480
+[2025-11-19 18:22:16] CLIENT_CMD fd=5 cmd="READ 4"
+[2025-11-19 18:22:16] READ_START inode=4 filepath=1/4.txt by_fd=5
+[2025-11-19 18:22:16] READ_SEND filepath=1/4.txt to_fd=5
+[2025-11-19 18:22:16] READ_SENT inode=4 filepath=1/4.txt to_fd=5
+[2025-11-19 18:22:30] CLIENT_ACCEPT fd=6
+[2025-11-19 18:22:30] CLIENT_CONNECT fd=6
+[2025-11-19 18:22:30] CLIENT_CMD fd=6 cmd="STREAM 4"
+[2025-11-19 18:22:30] STREAM_REQUEST inode=4 filepath=1/4.txt from_fd=6
+[2025-11-19 18:22:35] STREAM_SEND filepath=1/4.txt to_fd=6
+[2025-11-19 18:22:35] STREAM_SENT inode=4 filepath=1/4.txt to_fd=6
+[2025-11-19 18:23:11] CLIENT_ACCEPT fd=5
+[2025-11-19 18:23:11] CLIENT_CONNECT fd=5
+[2025-11-19 18:23:11] CLIENT_CMD fd=5 cmd="STREAM 4"
+[2025-11-19 18:23:11] STREAM_REQUEST inode=4 filepath=1/4.txt from_fd=5
+[2025-11-19 18:23:16] STREAM_SEND filepath=1/4.txt to_fd=5
+[2025-11-19 18:23:16] STREAM_SENT inode=4 filepath=1/4.txt to_fd=5
+[2025-11-19 18:29:12] DIR_DELETED path=0
+[2025-11-19 18:55:18] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 18:55:22] CLIENT_LISTENER start port=8888
+[2025-11-19 18:56:56] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 18:57:01] CLIENT_LISTENER start port=8008
+[2025-11-19 18:57:06] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 18:57:06] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 18:57:06] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 18:57:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 18:57:11] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 18:57:11] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 18:57:11] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-19 18:57:11] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 18:57:20] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-19 18:57:20] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-19 18:57:20] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-19 18:57:20] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-19 18:58:18] CLIENT_ACCEPT fd=5
+[2025-11-19 18:58:18] CLIENT_CONNECT fd=5
+[2025-11-19 18:58:18] CLIENT_CMD fd=5 cmd="WRITE 2 0"
+[2025-11-19 18:58:18] WRITE_REQUEST inode=2 filepath=0/2.txt from_fd=5 sentence=0
+[2025-11-19 18:58:18] SENTENCE_RETRIEVED filepath=0/2.txt sentence=1 to_fd=5
+[2025-11-19 18:58:32] WRITE_APPLIED filepath=0/2.txt sentence=1 delta=5
+[2025-11-19 18:58:32] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 18:58:32] WRITE_COMPLETED inode=2 filepath=0/2.txt
+[2025-11-19 19:00:46] DIR_DELETED path=0
+[2025-11-19 19:00:46] DIR_DELETED path=1
+[2025-11-19 19:11:19] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 19:11:24] CLIENT_LISTENER start port=8888
+[2025-11-19 19:11:48] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 19:11:53] CLIENT_LISTENER start port=8800
+[2025-11-19 19:12:18] RMDIR_OPENDIR_FAIL path=1 err=No such file or directory
+[2025-11-19 19:12:18] RMDIR_OPENDIR_FAIL path=0 err=No such file or directory
+[2025-11-19 19:14:28] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 19:14:33] CLIENT_LISTENER start port=8888
+[2025-11-19 19:14:55] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 19:15:02] CLIENT_LISTENER start port=8800
+[2025-11-19 19:17:36] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-19 19:17:36] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-19 19:17:36] INODE_ADD ss_id=0 inode=1 slot=0
+[2025-11-19 19:17:36] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 19:18:47] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-19 19:18:47] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-19 19:18:47] INODE_ADD ss_id=0 inode=2 slot=1
+[2025-11-19 19:18:47] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-19 19:18:55] CLIENT_ACCEPT fd=5
+[2025-11-19 19:18:55] CLIENT_CONNECT fd=5
+[2025-11-19 19:18:55] CLIENT_CMD fd=5 cmd="WRITE 2 0"
+[2025-11-19 19:18:55] WRITE_REQUEST inode=2 filepath=0/2.txt from_fd=5 sentence=0
+[2025-11-19 19:18:55] SENTENCE_RETRIEVED filepath=0/2.txt sentence=1 to_fd=5
+[2025-11-19 19:19:03] WRITE_APPLIED filepath=0/2.txt sentence=1 delta=5
+[2025-11-19 19:19:03] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 19:19:03] WRITE_COMPLETED inode=2 filepath=0/2.txt
+[2025-11-19 19:20:41] RMDIR_OPENDIR_FAIL path=1 err=No such file or directory
+[2025-11-19 19:20:41] DIR_DELETED path=0
+[2025-11-19 19:26:18] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-19 19:26:22] CLIENT_LISTENER start port=8888
+[2025-11-19 19:26:31] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-19 19:26:31] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-19 19:26:31] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-19 19:26:31] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-19 19:26:44] CLIENT_ACCEPT fd=5
+[2025-11-19 19:26:44] CLIENT_CONNECT fd=5
+[2025-11-19 19:26:44] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-19 19:26:44] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-19 19:26:44] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-19 19:26:55] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=5
+[2025-11-19 19:26:55] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-19 19:26:55] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-19 19:27:00] CLIENT_ACCEPT fd=6
+[2025-11-19 19:27:00] CLIENT_CONNECT fd=6
+[2025-11-19 19:27:00] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-19 19:27:00] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-19 19:27:00] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-19 19:27:00] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-19 19:29:43] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-19 19:29:56] CLIENT_LISTENER start port=8808
+[2025-11-19 19:35:54] RMDIR_OPENDIR_FAIL path=0 err=No such file or directory
+[2025-11-19 19:35:54] DIR_DELETED path=1
+[2025-11-20 09:29:38] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 09:29:47] CLIENT_LISTENER start port=8888
+[2025-11-20 09:31:09] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 09:31:09] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 09:31:09] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 09:31:09] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 09:31:14] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 09:31:14] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 09:31:14] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 09:31:14] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 09:31:41] CLIENT_ACCEPT fd=5
+[2025-11-20 09:31:41] CLIENT_CONNECT fd=5
+[2025-11-20 09:31:41] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-20 09:31:41] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-20 09:31:41] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-20 09:31:56] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=5
+[2025-11-20 09:31:56] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 09:31:56] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 09:33:19] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-20 09:36:08] CLIENT_ACCEPT fd=6
+[2025-11-20 09:36:08] CLIENT_CONNECT fd=6
+[2025-11-20 09:36:08] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-20 09:36:08] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-20 09:36:08] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-20 09:36:08] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-20 09:36:54] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 09:36:54] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 09:36:54] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 09:37:00] CLIENT_ACCEPT fd=5
+[2025-11-20 09:37:00] CLIENT_CONNECT fd=5
+[2025-11-20 09:37:00] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 09:37:00] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 09:37:00] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 09:37:00] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 09:38:10] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 09:38:10] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-20 09:38:10] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 09:39:37] CLIENT_ACCEPT fd=6
+[2025-11-20 09:39:37] CLIENT_CONNECT fd=6
+[2025-11-20 09:39:37] CLIENT_CMD fd=6 cmd="STREAM 1"
+[2025-11-20 09:39:37] STREAM_REQUEST inode=1 filepath=0/1.txt from_fd=6
+[2025-11-20 09:39:37] STREAM_SEND filepath=0/1.txt to_fd=6
+[2025-11-20 09:39:37] STREAM_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-20 09:40:04] CLIENT_ACCEPT fd=5
+[2025-11-20 09:40:04] CLIENT_CONNECT fd=5
+[2025-11-20 09:40:04] CLIENT_CMD fd=5 cmd="STREAM 1"
+[2025-11-20 09:40:04] STREAM_REQUEST inode=1 filepath=0/1.txt from_fd=5
+[2025-11-20 09:40:04] STREAM_SEND filepath=0/1.txt to_fd=5
+[2025-11-20 09:40:04] STREAM_SENT inode=1 filepath=0/1.txt to_fd=5
+[2025-11-20 09:40:37] CLIENT_ACCEPT fd=6
+[2025-11-20 09:40:37] CLIENT_CONNECT fd=6
+[2025-11-20 09:40:37] CLIENT_CMD fd=6 cmd="WRITE 1 0"
+[2025-11-20 09:40:37] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=6 sentence=0
+[2025-11-20 09:40:37] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=6
+[2025-11-20 09:40:45] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=5
+[2025-11-20 09:40:45] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 09:40:45] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 09:40:49] EXEC_SENT filepath=0/1.txt to_nm_fd=3
+[2025-11-20 09:41:07] DIR_DELETED path=0
+[2025-11-20 10:05:43] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 10:05:49] CLIENT_LISTENER start port=8899
+[2025-11-20 10:06:11] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 10:06:11] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 10:06:11] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 10:06:11] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 10:06:45] CLIENT_ACCEPT fd=5
+[2025-11-20 10:06:45] CLIENT_CONNECT fd=5
+[2025-11-20 10:06:45] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-20 10:06:45] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-20 10:06:45] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-20 10:07:21] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=19
+[2025-11-20 10:07:21] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 10:07:21] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 10:07:41] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-20 10:07:46] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-20 10:08:03] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 10:08:03] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-20 10:08:03] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 10:12:33] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-20 10:12:38] CLIENT_LISTENER start port=8898
+[2025-11-20 10:13:00] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 10:13:00] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 10:13:00] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 10:13:00] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 10:13:07] CLIENT_ACCEPT fd=5
+[2025-11-20 10:13:07] CLIENT_CONNECT fd=5
+[2025-11-20 10:13:07] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-20 10:13:07] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-20 10:13:07] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-20 10:13:18] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=12
+[2025-11-20 10:13:18] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 10:13:18] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 10:13:38] CLIENT_ACCEPT fd=7
+[2025-11-20 10:13:38] CLIENT_CONNECT fd=7
+[2025-11-20 10:13:38] CLIENT_CMD fd=7 cmd="READ 0"
+[2025-11-20 10:13:38] READ_START inode=0 filepath=0/0.txt by_fd=7
+[2025-11-20 10:13:38] READ_SEND filepath=0/0.txt to_fd=7
+[2025-11-20 10:13:38] READ_SENT inode=0 filepath=0/0.txt to_fd=7
+[2025-11-20 10:13:44] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-20 10:13:54] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-20 10:14:06] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 10:14:06] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-20 10:14:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 10:14:17] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 10:14:17] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 10:14:17] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 10:14:17] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 10:14:20] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 10:14:20] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 10:14:20] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 10:14:20] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 10:14:25] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-20 10:14:25] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-20 10:14:25] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-20 10:14:25] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-20 10:15:29] MKDIR_TOUCH_OK path=0/3.txt
+[2025-11-20 10:15:29] MKDIR_TOUCH_OK path=0/3.txt.bak
+[2025-11-20 10:15:29] INODE_ADD ss_id=0 inode=3 slot=3
+[2025-11-20 10:15:29] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=4
+[2025-11-20 10:20:53] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-20 10:21:42] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-20 10:23:14] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 10:23:19] CLIENT_LISTENER start port=8888
+[2025-11-20 10:23:37] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 10:23:37] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 10:23:37] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 10:23:37] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 10:23:41] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 10:23:41] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 10:23:41] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 10:23:41] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 10:25:02] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-20 10:25:02] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-20 10:25:02] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-20 10:25:02] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-20 10:27:58] CLIENT_ACCEPT fd=5
+[2025-11-20 10:27:58] CLIENT_CONNECT fd=5
+[2025-11-20 10:27:58] CLIENT_CMD fd=5 cmd="WRITE 2 0"
+[2025-11-20 10:27:58] WRITE_REQUEST inode=2 filepath=0/2.txt from_fd=5 sentence=0
+[2025-11-20 10:27:58] SENTENCE_RETRIEVED filepath=0/2.txt sentence=1 to_fd=5
+[2025-11-20 10:28:40] WRITE_APPLIED filepath=0/2.txt sentence=1 delta=709
+[2025-11-20 10:28:40] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 10:28:40] WRITE_COMPLETED inode=2 filepath=0/2.txt
+[2025-11-20 10:28:59] CLIENT_ACCEPT fd=6
+[2025-11-20 10:28:59] CLIENT_CONNECT fd=6
+[2025-11-20 10:28:59] CLIENT_CMD fd=6 cmd="READ 2"
+[2025-11-20 10:28:59] READ_START inode=2 filepath=0/2.txt by_fd=6
+[2025-11-20 10:28:59] READ_SEND filepath=0/2.txt to_fd=6
+[2025-11-20 10:28:59] READ_SENT inode=2 filepath=0/2.txt to_fd=6
+[2025-11-20 10:29:06] CLIENT_ACCEPT fd=5
+[2025-11-20 10:29:06] CLIENT_CONNECT fd=5
+[2025-11-20 10:29:06] CLIENT_CMD fd=5 cmd="STREAM 2"
+[2025-11-20 10:29:06] STREAM_REQUEST inode=2 filepath=0/2.txt from_fd=5
+[2025-11-20 10:33:49] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-20 10:34:52] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 10:35:00] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 10:35:08] CLIENT_LISTENER start port=8888
+[2025-11-20 10:35:22] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 10:35:28] CLIENT_LISTENER start port=8989
+[2025-11-20 10:36:04] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 10:36:04] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 10:36:04] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 10:36:04] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 10:36:09] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 10:36:09] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 10:36:09] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 10:36:09] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 10:36:21] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-20 10:36:21] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-20 10:36:21] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-20 10:36:21] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-20 10:38:18] MKDIR_TOUCH_OK path=0/3.txt
+[2025-11-20 10:38:18] MKDIR_TOUCH_OK path=0/3.txt.bak
+[2025-11-20 10:38:18] INODE_ADD ss_id=0 inode=3 slot=3
+[2025-11-20 10:38:18] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=4
+[2025-11-20 10:42:00] DIR_DELETED path=0
+[2025-11-20 10:42:00] RMDIR_OPENDIR_FAIL path=1 err=No such file or directory
+[2025-11-20 10:51:57] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 10:52:02] CLIENT_LISTENER start port=8888
+[2025-11-20 10:52:23] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 10:52:23] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 10:52:23] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 10:52:23] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 10:52:28] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 10:52:28] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 10:52:28] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 10:52:28] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 10:56:58] DIR_DELETED path=0
+[2025-11-20 17:34:09] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 17:34:13] CLIENT_LISTENER start port=9000
+[2025-11-20 17:34:26] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 17:34:26] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 17:34:26] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 17:34:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 17:34:34] CLIENT_ACCEPT fd=5
+[2025-11-20 17:34:34] CLIENT_CONNECT fd=5
+[2025-11-20 17:34:34] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 17:34:34] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 17:34:34] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 17:34:34] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 17:34:42] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:34:42] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:34:42] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:35:08] CLIENT_ACCEPT fd=6
+[2025-11-20 17:35:08] CLIENT_CONNECT fd=6
+[2025-11-20 17:35:08] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-20 17:35:08] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-20 17:35:08] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-20 17:35:12] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-20 17:35:12] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 17:35:12] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 17:35:17] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:35:17] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:35:17] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:35:31] CLIENT_ACCEPT fd=5
+[2025-11-20 17:35:31] CLIENT_CONNECT fd=5
+[2025-11-20 17:35:31] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 17:35:31] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 17:35:31] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 17:35:31] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 17:35:36] CLIENT_ACCEPT fd=6
+[2025-11-20 17:35:36] CLIENT_CONNECT fd=6
+[2025-11-20 17:35:36] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-20 17:35:36] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-20 17:35:36] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-20 17:35:41] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-20 17:35:41] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 17:35:41] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 17:35:45] CLIENT_ACCEPT fd=5
+[2025-11-20 17:35:45] CLIENT_CONNECT fd=5
+[2025-11-20 17:35:45] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 17:35:45] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 17:35:45] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 17:35:45] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 17:35:51] CLIENT_ACCEPT fd=6
+[2025-11-20 17:35:51] CLIENT_CONNECT fd=6
+[2025-11-20 17:35:51] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-20 17:35:51] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-20 17:35:51] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:35:51] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-20 17:35:56] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-20 17:35:56] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 17:35:56] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 17:36:00] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:36:00] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:36:00] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:36:05] CLIENT_ACCEPT fd=5
+[2025-11-20 17:36:05] CLIENT_CONNECT fd=5
+[2025-11-20 17:36:05] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 17:36:05] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 17:36:05] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 17:36:05] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 17:36:11] DIR_DELETED path=0
+[2025-11-20 17:41:11] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 17:41:15] CLIENT_LISTENER start port=9000
+[2025-11-20 17:41:27] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 17:41:27] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 17:41:27] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 17:41:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 17:41:33] CLIENT_ACCEPT fd=5
+[2025-11-20 17:41:33] CLIENT_CONNECT fd=5
+[2025-11-20 17:41:33] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-20 17:41:33] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-20 17:41:33] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-20 17:41:38] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-20 17:41:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 17:41:38] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 17:41:42] CLIENT_ACCEPT fd=6
+[2025-11-20 17:41:42] CLIENT_CONNECT fd=6
+[2025-11-20 17:41:42] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-20 17:41:42] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-20 17:41:42] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-20 17:41:42] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-20 17:41:46] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:41:46] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:41:46] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:43:24] DIR_DELETED path=0
+[2025-11-20 17:43:46] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 17:43:50] CLIENT_LISTENER start port=9000
+[2025-11-20 17:44:03] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 17:44:03] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 17:44:03] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 17:44:03] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 17:44:07] CLIENT_ACCEPT fd=5
+[2025-11-20 17:44:07] CLIENT_CONNECT fd=5
+[2025-11-20 17:44:07] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-20 17:44:07] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-20 17:44:07] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-20 17:44:11] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-20 17:44:11] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 17:44:11] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 17:44:15] CLIENT_ACCEPT fd=7
+[2025-11-20 17:44:15] CLIENT_CONNECT fd=7
+[2025-11-20 17:44:15] CLIENT_CMD fd=7 cmd="READ 0"
+[2025-11-20 17:44:15] READ_START inode=0 filepath=0/0.txt by_fd=7
+[2025-11-20 17:44:15] READ_SEND filepath=0/0.txt to_fd=7
+[2025-11-20 17:44:15] READ_SENT inode=0 filepath=0/0.txt to_fd=7
+[2025-11-20 17:44:18] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:44:18] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:44:19] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 17:44:19] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 17:44:22] CLIENT_ACCEPT fd=5
+[2025-11-20 17:44:22] CLIENT_CONNECT fd=5
+[2025-11-20 17:44:22] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 17:44:22] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 17:44:22] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 17:44:22] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 17:44:26] DIR_DELETED path=0
+[2025-11-20 18:45:57] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 18:46:05] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 18:46:10] CLIENT_LISTENER start port=8888
+[2025-11-20 18:48:18] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 18:48:18] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 18:48:18] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 18:48:18] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 18:51:16] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 18:51:16] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 18:51:16] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 18:51:16] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 18:52:57] CLIENT_ACCEPT fd=5
+[2025-11-20 18:52:57] CLIENT_CONNECT fd=5
+[2025-11-20 18:52:57] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-20 18:52:57] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-20 18:52:57] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-20 18:53:15] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=22
+[2025-11-20 18:53:15] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 18:53:15] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 18:53:35] CLIENT_CONNECT fd=6
+[2025-11-20 18:53:35] CLIENT_ACCEPT fd=6
+[2025-11-20 18:53:35] CLIENT_CMD fd=6 cmd="READ 1"
+[2025-11-20 18:53:35] READ_START inode=1 filepath=0/1.txt by_fd=6
+[2025-11-20 18:53:35] READ_SEND filepath=0/1.txt to_fd=6
+[2025-11-20 18:53:35] READ_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-20 18:53:47] EXEC_SENT filepath=0/1.txt to_nm_fd=3
+[2025-11-20 18:54:19] MKDIR_TOUCH_OK path=0/2.txt
+[2025-11-20 18:54:19] MKDIR_TOUCH_OK path=0/2.txt.bak
+[2025-11-20 18:54:19] INODE_ADD ss_id=0 inode=2 slot=2
+[2025-11-20 18:54:19] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-20 19:01:39] MKDIR_TOUCH_OK path=0/3.txt
+[2025-11-20 19:01:39] MKDIR_TOUCH_OK path=0/3.txt.bak
+[2025-11-20 19:01:39] INODE_ADD ss_id=0 inode=3 slot=3
+[2025-11-20 19:01:39] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=4
+[2025-11-20 19:04:53] CLIENT_ACCEPT fd=5
+[2025-11-20 19:04:53] CLIENT_CONNECT fd=5
+[2025-11-20 19:04:53] CLIENT_CMD fd=5 cmd="WRITE 2 0"
+[2025-11-20 19:04:53] WRITE_REQUEST inode=2 filepath=0/2.txt from_fd=5 sentence=0
+[2025-11-20 19:04:53] SENTENCE_RETRIEVED filepath=0/2.txt sentence=1 to_fd=5
+[2025-11-20 19:05:42] WRITE_RECV_FAIL filepath=0/2.txt sentence=1 err=peer_closed
+[2025-11-20 19:05:42] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:05:42] WRITE_COMPLETED inode=2 filepath=0/2.txt
+[2025-11-20 19:06:13] DIR_DELETED path=0
+[2025-11-20 19:16:55] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 19:17:02] CLIENT_LISTENER start port=8888
+[2025-11-20 19:17:26] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 19:17:26] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 19:17:26] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 19:17:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 19:17:40] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-20 19:17:40] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-20 19:17:40] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-20 19:17:40] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-20 19:18:11] CLIENT_ACCEPT fd=5
+[2025-11-20 19:18:11] CLIENT_CONNECT fd=5
+[2025-11-20 19:18:11] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-20 19:18:11] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-20 19:18:11] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-20 19:18:19] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=6
+[2025-11-20 19:18:19] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:18:19] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 19:18:27] EXEC_SENT filepath=0/1.txt to_nm_fd=3
+[2025-11-20 19:20:37] CLIENT_ACCEPT fd=6
+[2025-11-20 19:20:37] CLIENT_CONNECT fd=6
+[2025-11-20 19:20:37] CLIENT_CMD fd=6 cmd="WRITE 1 0"
+[2025-11-20 19:20:37] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=6 sentence=0
+[2025-11-20 19:20:37] BACKUP_PATH src=0/1.txt backup=0/1.txt.bak
+[2025-11-20 19:20:37] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=6
+[2025-11-20 19:21:34] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=0
+[2025-11-20 19:21:34] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:21:34] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 19:21:57] CLIENT_ACCEPT fd=5
+[2025-11-20 19:21:57] CLIENT_CONNECT fd=5
+[2025-11-20 19:21:57] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-20 19:21:57] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-20 19:21:57] BACKUP_PATH src=0/1.txt backup=0/1.txt.bak
+[2025-11-20 19:21:57] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-20 19:22:09] CLIENT_ACCEPT fd=6
+[2025-11-20 19:22:09] CLIENT_CONNECT fd=6
+[2025-11-20 19:22:09] CLIENT_CMD fd=6 cmd="READ 1"
+[2025-11-20 19:22:09] READ_START inode=1 filepath=0/1.txt by_fd=6
+[2025-11-20 19:22:09] READ_SEND filepath=0/1.txt to_fd=6
+[2025-11-20 19:22:09] READ_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-20 19:22:35] CLIENT_ACCEPT fd=7
+[2025-11-20 19:22:35] CLIENT_CONNECT fd=7
+[2025-11-20 19:22:35] CLIENT_CMD fd=7 cmd="READ 1"
+[2025-11-20 19:22:35] READ_START inode=1 filepath=0/1.txt by_fd=7
+[2025-11-20 19:22:35] READ_SEND filepath=0/1.txt to_fd=7
+[2025-11-20 19:22:35] READ_SENT inode=1 filepath=0/1.txt to_fd=7
+[2025-11-20 19:23:01] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=18
+[2025-11-20 19:23:01] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:23:01] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 19:23:11] CLIENT_ACCEPT fd=8
+[2025-11-20 19:23:11] CLIENT_CONNECT fd=8
+[2025-11-20 19:23:11] CLIENT_CMD fd=8 cmd="READ 1"
+[2025-11-20 19:23:11] READ_START inode=1 filepath=0/1.txt by_fd=8
+[2025-11-20 19:23:11] READ_SEND filepath=0/1.txt to_fd=8
+[2025-11-20 19:23:11] READ_SENT inode=1 filepath=0/1.txt to_fd=8
+[2025-11-20 19:23:33] CLIENT_ACCEPT fd=5
+[2025-11-20 19:23:33] CLIENT_CONNECT fd=5
+[2025-11-20 19:23:33] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-20 19:23:33] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-20 19:23:33] BACKUP_PATH src=0/1.txt backup=0/1.txt.bak
+[2025-11-20 19:23:33] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-20 19:24:09] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=6
+[2025-11-20 19:24:09] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:24:09] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 19:24:09] CLIENT_ACCEPT fd=6
+[2025-11-20 19:24:09] CLIENT_CONNECT fd=6
+[2025-11-20 19:24:09] CLIENT_CMD fd=6 cmd="WRITE 1 1"
+[2025-11-20 19:24:09] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=6 sentence=1
+[2025-11-20 19:24:09] BACKUP_PATH src=0/1.txt backup=0/1.txt.bak
+[2025-11-20 19:24:09] SENTENCE_RETRIEVED filepath=0/1.txt sentence=2 to_fd=6
+[2025-11-20 19:28:26] WRITE_RECV_FAIL filepath=0/1.txt sentence=2 err=peer_closed
+[2025-11-20 19:28:26] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:28:26] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-20 19:28:30] DIR_DELETED path=0
+
+[2025-11-20 19:42:26] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-20 19:42:31] CLIENT_LISTENER start port=9999
+[2025-11-20 19:42:48] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-20 19:42:48] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-20 19:42:48] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-20 19:42:48] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-20 19:42:55] CLIENT_ACCEPT fd=5
+[2025-11-20 19:42:55] CLIENT_CONNECT fd=5
+[2025-11-20 19:42:55] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-20 19:42:55] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-20 19:42:55] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-20 19:43:25] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=18
+[2025-11-20 19:43:25] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:43:25] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 19:43:32] CLIENT_ACCEPT fd=6
+[2025-11-20 19:43:32] CLIENT_CONNECT fd=6
+[2025-11-20 19:43:32] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-20 19:43:32] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-20 19:43:32] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-20 19:43:32] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-20 19:43:42] CLIENT_ACCEPT fd=5
+[2025-11-20 19:43:42] CLIENT_CONNECT fd=5
+[2025-11-20 19:43:42] CLIENT_CMD fd=5 cmd="WRITE 0 1"
+[2025-11-20 19:43:42] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=1
+[2025-11-20 19:43:42] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 19:43:42] SENTENCE_RETRIEVED filepath=0/0.txt sentence=2 to_fd=5
+[2025-11-20 19:44:01] WRITE_APPLIED filepath=0/0.txt sentence=2 delta=10
+[2025-11-20 19:44:01] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:44:01] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 19:44:06] CLIENT_ACCEPT fd=6
+[2025-11-20 19:44:06] CLIENT_CONNECT fd=6
+[2025-11-20 19:44:06] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-20 19:44:06] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-20 19:44:06] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-20 19:44:06] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-20 19:44:28] CLIENT_ACCEPT fd=7
+[2025-11-20 19:44:28] CLIENT_CONNECT fd=7
+[2025-11-20 19:44:28] CLIENT_CMD fd=7 cmd="WRITE 0 1"
+[2025-11-20 19:44:28] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=7 sentence=1
+[2025-11-20 19:44:28] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 19:44:28] SENTENCE_RETRIEVED filepath=0/0.txt sentence=2 to_fd=7
+[2025-11-20 19:44:40] WRITE_APPLIED filepath=0/0.txt sentence=2 delta=8
+[2025-11-20 19:44:40] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:44:40] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-20 19:44:44] CLIENT_ACCEPT fd=5
+[2025-11-20 19:44:44] CLIENT_CONNECT fd=5
+[2025-11-20 19:44:44] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-20 19:44:44] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-20 19:44:44] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-20 19:44:44] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-20 19:44:56] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 19:44:56] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-20 19:44:56] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-20 19:44:57] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-20 19:45:01] CLIENT_ACCEPT fd=6
+[2025-11-20 19:45:01] CLIENT_CONNECT fd=6
+[2025-11-20 19:45:01] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-20 19:45:01] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-20 19:45:01] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-20 19:45:01] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-20 19:45:08] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 12:19:29] DIR_DELETED path=0
+[2025-11-21 12:36:58] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 12:37:06] CLIENT_LISTENER start port=8998
+[2025-11-21 12:38:21] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 12:38:21] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 12:38:21] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 12:38:21] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 12:38:27] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 12:38:27] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 12:38:27] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-21 12:38:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 12:41:56] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 12:41:56] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 12:41:56] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 12:45:11] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 12:45:11] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 12:45:11] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 12:45:11] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 12:49:09] DIR_DELETED path=0
+[2025-11-21 12:57:00] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 12:57:04] CLIENT_LISTENER start port=8989
+[2025-11-21 12:57:40] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 12:57:40] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 12:57:40] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 12:57:40] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 12:57:52] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 12:57:52] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 12:57:52] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-21 12:57:52] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 12:58:06] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 12:58:06] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 12:58:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 12:58:23] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 12:58:23] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 12:58:23] INODE_ADD ss_id=0 inode=1 slot=0
+[2025-11-21 12:58:23] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 12:58:37] CLIENT_ACCEPT fd=5
+[2025-11-21 12:58:37] CLIENT_CONNECT fd=5
+[2025-11-21 12:58:37] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-21 12:58:37] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-21 12:58:37] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-21 12:59:53] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=16
+[2025-11-21 12:59:53] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 12:59:53] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-21 13:00:00] CLIENT_ACCEPT fd=6
+[2025-11-21 13:00:00] CLIENT_CONNECT fd=6
+[2025-11-21 13:00:00] CLIENT_CMD fd=6 cmd="READ 1"
+[2025-11-21 13:00:00] READ_START inode=1 filepath=0/1.txt by_fd=6
+[2025-11-21 13:00:00] READ_SEND filepath=0/1.txt to_fd=6
+[2025-11-21 13:00:00] READ_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-21 13:00:11] EXEC_SENT filepath=0/1.txt to_nm_fd=3
+[2025-11-21 13:02:41] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:09:00] DIR_DELETED path=0
+[2025-11-21 13:15:49] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 13:16:14] CLIENT_LISTENER start port=8080
+[2025-11-21 13:18:13] MKDIR_TOUCH_OK path=1/1.txt
+[2025-11-21 13:18:13] MKDIR_TOUCH_OK path=1/1.txt.bak
+[2025-11-21 13:18:13] INODE_ADD ss_id=1 inode=1 slot=0
+[2025-11-21 13:18:13] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1
+[2025-11-21 13:21:19] MKDIR_TOUCH_OK path=1/0.txt
+[2025-11-21 13:21:19] MKDIR_TOUCH_OK path=1/0.txt.bak
+[2025-11-21 13:21:19] INODE_ADD ss_id=1 inode=0 slot=1
+[2025-11-21 13:21:19] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=2
+[2025-11-21 13:26:49] DIR_DELETED path=1
+[2025-11-21 13:15:05] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 13:15:10] CLIENT_LISTENER start port=8989
+[2025-11-21 13:16:47] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 13:16:47] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 13:16:47] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 13:16:47] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 13:16:53] CLIENT_ACCEPT fd=5
+[2025-11-21 13:16:53] CLIENT_CONNECT fd=5
+[2025-11-21 13:16:53] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 13:16:53] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 13:16:53] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 13:17:15] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=17
+[2025-11-21 13:17:15] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:17:15] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:17:23] CLIENT_ACCEPT fd=6
+[2025-11-21 13:17:23] CLIENT_CONNECT fd=6
+[2025-11-21 13:17:23] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 13:17:23] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 13:17:23] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 13:17:23] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 13:19:12] CLIENT_ACCEPT fd=5
+[2025-11-21 13:19:12] CLIENT_CONNECT fd=5
+[2025-11-21 13:19:12] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 13:19:12] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 13:19:12] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:19:12] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 13:19:25] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=3
+[2025-11-21 13:19:25] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:19:25] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:19:33] CLIENT_ACCEPT fd=6
+[2025-11-21 13:19:33] CLIENT_CONNECT fd=6
+[2025-11-21 13:19:33] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 13:19:33] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 13:19:33] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 13:19:33] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 13:19:45] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 13:20:12] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:20:12] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 13:20:12] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:26:49] DIR_DELETED path=0
+[2025-11-21 13:54:41] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 13:54:54] CLIENT_LISTENER start port=8989
+[2025-11-21 14:03:30] MKDIR_TOUCH_OK path=1/1.txt
+[2025-11-21 14:03:30] MKDIR_TOUCH_OK path=1/1.txt.bak
+[2025-11-21 14:03:30] INODE_ADD ss_id=1 inode=1 slot=0
+[2025-11-21 14:03:30] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1
+[2025-11-21 13:39:43] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 13:39:49] CLIENT_LISTENER start port=8008
+[2025-11-21 13:40:38] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 13:40:38] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 13:40:38] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 13:40:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 13:40:43] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 13:40:43] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 13:40:43] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-21 13:40:43] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 13:40:54] CLIENT_ACCEPT fd=5
+[2025-11-21 13:40:54] CLIENT_CONNECT fd=5
+[2025-11-21 13:40:54] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 13:40:54] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 13:40:54] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 13:41:12] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=12
+[2025-11-21 13:41:12] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:41:12] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:44:45] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 13:47:27] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 13:47:27] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 13:47:27] INODE_ADD ss_id=0 inode=0 slot=2
+[2025-11-21 13:47:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=3
+[2025-11-21 13:47:36] CLIENT_ACCEPT fd=6
+[2025-11-21 13:47:36] CLIENT_CONNECT fd=6
+[2025-11-21 13:47:36] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-21 13:47:36] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-21 13:47:36] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:47:36] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-21 13:48:31] WRITE_RECV_FAIL filepath=0/0.txt sentence=1 err=peer_closed
+[2025-11-21 13:48:31] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:48:31] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:48:54] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 13:48:54] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 13:48:54] INODE_ADD ss_id=0 inode=0 slot=3
+[2025-11-21 13:48:54] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=4
+[2025-11-21 13:48:58] CLIENT_ACCEPT fd=5
+[2025-11-21 13:48:58] CLIENT_CONNECT fd=5
+[2025-11-21 13:48:58] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 13:48:58] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 13:48:58] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:48:58] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 13:49:13] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=12
+[2025-11-21 13:49:13] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:49:13] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:49:17] CLIENT_ACCEPT fd=6
+[2025-11-21 13:49:17] CLIENT_CONNECT fd=6
+[2025-11-21 13:49:17] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 13:49:17] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 13:49:17] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 13:49:17] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 13:49:40] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:49:40] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 13:49:40] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:50:23] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 13:50:23] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 13:50:23] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 13:50:23] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=4
+[2025-11-21 13:50:27] CLIENT_ACCEPT fd=5
+[2025-11-21 13:50:27] CLIENT_CONNECT fd=5
+[2025-11-21 13:50:27] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 13:50:27] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 13:50:27] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 13:50:41] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=210
+[2025-11-21 13:50:41] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:50:41] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:50:46] CLIENT_ACCEPT fd=6
+[2025-11-21 13:50:46] CLIENT_CONNECT fd=6
+[2025-11-21 13:50:46] CLIENT_CMD fd=6 cmd="STREAM 0"
+[2025-11-21 13:50:46] STREAM_REQUEST inode=0 filepath=0/0.txt from_fd=6
+[2025-11-21 13:50:49] STREAM_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 13:50:49] STREAM_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 13:51:55] CLIENT_ACCEPT fd=5
+[2025-11-21 13:51:55] CLIENT_CONNECT fd=5
+[2025-11-21 13:51:55] CLIENT_CMD fd=5 cmd="WRITE 0 2"
+[2025-11-21 13:51:55] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=2
+[2025-11-21 13:51:55] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:51:55] SENTENCE_RETRIEVED filepath=0/0.txt sentence=3 to_fd=5
+[2025-11-21 13:52:31] WRITE_APPLIED filepath=0/0.txt sentence=3 delta=262
+[2025-11-21 13:52:31] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:52:31] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:52:40] CLIENT_ACCEPT fd=6
+[2025-11-21 13:52:40] CLIENT_CONNECT fd=6
+[2025-11-21 13:52:40] CLIENT_CMD fd=6 cmd="STREAM 0"
+[2025-11-21 13:52:40] STREAM_REQUEST inode=0 filepath=0/0.txt from_fd=6
+[2025-11-21 13:52:48] STREAM_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 13:52:48] STREAM_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 13:53:13] CLIENT_ACCEPT fd=5
+[2025-11-21 13:53:13] CLIENT_CONNECT fd=5
+[2025-11-21 13:53:13] CLIENT_CMD fd=5 cmd="WRITE 0 4"
+[2025-11-21 13:53:13] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=4
+[2025-11-21 13:53:13] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 13:53:13] SENTENCE_RETRIEVED filepath=0/0.txt sentence=5 to_fd=5
+[2025-11-21 13:53:27] WRITE_APPLIED filepath=0/0.txt sentence=5 delta=5
+[2025-11-21 13:53:27] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 13:53:27] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 13:53:40] CLIENT_ACCEPT fd=6
+[2025-11-21 13:53:40] CLIENT_CONNECT fd=6
+[2025-11-21 13:53:40] CLIENT_CMD fd=6 cmd="STREAM 0"
+[2025-11-21 13:53:40] STREAM_REQUEST inode=0 filepath=0/0.txt from_fd=6
+[2025-11-21 13:53:48] STREAM_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 13:53:48] STREAM_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 14:15:25] DIR_DELETED path=0
+[2025-11-21 14:19:23] PERSIST_LOADED path=backup.txt ss_id=1
+[2025-11-21 14:20:10] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 14:20:13] CLIENT_LISTENER start port=8787
+[2025-11-21 14:23:30] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 14:23:30] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 14:23:30] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 14:23:30] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 14:24:08] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 14:24:08] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 14:24:08] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 14:26:44] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 14:26:44] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 14:26:44] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 14:26:44] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 14:27:02] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 14:27:02] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 14:27:02] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-21 14:27:02] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 14:27:46] CLIENT_ACCEPT fd=5
+[2025-11-21 14:27:46] CLIENT_CONNECT fd=5
+[2025-11-21 14:27:46] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-21 14:27:46] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-21 14:27:46] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-21 14:28:05] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=14
+[2025-11-21 14:28:05] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 14:28:05] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-21 14:28:13] CLIENT_ACCEPT fd=6
+[2025-11-21 14:28:13] CLIENT_CONNECT fd=6
+[2025-11-21 14:28:13] CLIENT_CMD fd=6 cmd="WRITE 1 0"
+[2025-11-21 14:28:13] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=6 sentence=0
+[2025-11-21 14:28:13] BACKUP_PATH src=0/1.txt backup=0/1.txt.bak
+[2025-11-21 14:28:13] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=6
+[2025-11-21 14:28:19] CLIENT_ACCEPT fd=5
+[2025-11-21 14:28:19] CLIENT_CONNECT fd=5
+[2025-11-21 14:28:19] CLIENT_CMD fd=5 cmd="READ 1"
+[2025-11-21 14:28:19] READ_START inode=1 filepath=0/1.txt by_fd=5
+[2025-11-21 14:28:19] READ_SEND filepath=0/1.txt to_fd=5
+[2025-11-21 14:28:19] READ_SENT inode=1 filepath=0/1.txt to_fd=5
+[2025-11-21 14:28:38] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 14:28:38] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 14:28:38] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 14:29:06] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=3
+[2025-11-21 14:29:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 14:29:06] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-21 15:26:11] DIR_DELETED path=0
+[2025-11-21 16:40:42] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 16:40:48] CLIENT_LISTENER start port=8989
+[2025-11-21 16:41:10] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 16:41:10] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 16:41:10] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 16:41:10] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 16:41:19] CLIENT_ACCEPT fd=5
+[2025-11-21 16:41:19] CLIENT_CONNECT fd=5
+[2025-11-21 16:41:19] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 16:41:19] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 16:41:19] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 16:41:44] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=5
+[2025-11-21 16:41:44] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 16:41:44] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 16:41:51] CLIENT_ACCEPT fd=6
+[2025-11-21 16:41:51] CLIENT_CONNECT fd=6
+[2025-11-21 16:41:51] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 16:41:51] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 16:41:51] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 16:41:51] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 16:41:56] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 16:43:11] DIR_DELETED path=0
+[2025-11-21 17:03:46] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:03:53] CLIENT_LISTENER start port=8989
+[2025-11-21 17:04:30] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:04:30] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:04:30] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:04:30] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 17:04:37] CLIENT_ACCEPT fd=5
+[2025-11-21 17:04:37] CLIENT_CONNECT fd=5
+[2025-11-21 17:04:37] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:04:37] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:04:37] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:04:44] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=6
+[2025-11-21 17:04:44] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:04:44] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:04:55] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 17:05:54] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 17:05:54] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 17:05:54] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-21 17:05:54] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 17:06:00] CLIENT_ACCEPT fd=7
+[2025-11-21 17:06:00] CLIENT_CONNECT fd=7
+[2025-11-21 17:06:00] CLIENT_CMD fd=7 cmd="WRITE 1 0"
+[2025-11-21 17:06:00] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=7 sentence=0
+[2025-11-21 17:06:00] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=7
+[2025-11-21 17:06:14] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=6
+[2025-11-21 17:06:14] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:06:14] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-21 17:06:21] EXEC_SENT filepath=0/1.txt to_nm_fd=3
+[2025-11-21 17:11:50] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-21 17:12:30] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:12:38] CLIENT_LISTENER start port=9000
+[2025-11-21 17:14:40] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:14:40] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:14:40] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:14:40] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 17:14:50] CLIENT_ACCEPT fd=5
+[2025-11-21 17:14:50] CLIENT_CONNECT fd=5
+[2025-11-21 17:14:50] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:14:50] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:14:50] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:15:13] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=5
+[2025-11-21 17:15:13] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:15:13] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:15:28] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 17:19:34] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-21 17:20:00] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-21 17:20:09] DIR_DELETED path=0
+[2025-11-21 17:20:57] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:21:03] CLIENT_LISTENER start port=9000
+[2025-11-21 17:21:14] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:21:22] CLIENT_LISTENER start port=9001
+[2025-11-21 17:21:41] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:21:41] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:21:41] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:21:41] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 17:22:06] MKDIR_TOUCH_OK path=0/1.txt
+[2025-11-21 17:22:06] MKDIR_TOUCH_OK path=0/1.txt.bak
+[2025-11-21 17:22:06] INODE_ADD ss_id=0 inode=1 slot=1
+[2025-11-21 17:22:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 17:22:31] CLIENT_ACCEPT fd=5
+[2025-11-21 17:22:31] CLIENT_CONNECT fd=5
+[2025-11-21 17:22:31] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:22:31] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:22:31] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:22:36] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-21 17:22:36] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:22:36] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:22:40] CLIENT_ACCEPT fd=6
+[2025-11-21 17:22:40] CLIENT_CONNECT fd=6
+[2025-11-21 17:22:40] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:22:40] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 17:22:40] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 17:22:40] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 17:23:14] MKDIR_TOUCH_OK path=0/0_0.txt.chk
+[2025-11-21 17:23:17] CLIENT_ACCEPT fd=5
+[2025-11-21 17:23:17] CLIENT_CONNECT fd=5
+[2025-11-21 17:23:17] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-21 17:23:17] WRITE_REQUEST inode=1 filepath=0/1.txt from_fd=5 sentence=0
+[2025-11-21 17:23:17] SENTENCE_RETRIEVED filepath=0/1.txt sentence=1 to_fd=5
+[2025-11-21 17:23:24] WRITE_APPLIED filepath=0/1.txt sentence=1 delta=6
+[2025-11-21 17:23:24] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:23:24] WRITE_COMPLETED inode=1 filepath=0/1.txt
+[2025-11-21 17:23:28] CLIENT_ACCEPT fd=6
+[2025-11-21 17:23:28] CLIENT_CONNECT fd=6
+[2025-11-21 17:23:28] CLIENT_CMD fd=6 cmd="READ 1"
+[2025-11-21 17:23:28] READ_START inode=1 filepath=0/1.txt by_fd=6
+[2025-11-21 17:23:28] READ_SEND filepath=0/1.txt to_fd=6
+[2025-11-21 17:23:28] READ_SENT inode=1 filepath=0/1.txt to_fd=6
+[2025-11-21 17:23:45] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:23:45] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 17:23:45] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:24:51] MKDIR_TOUCH_OK path=1/0.txt
+[2025-11-21 17:24:51] MKDIR_TOUCH_OK path=1/0.txt.bak
+[2025-11-21 17:24:51] INODE_ADD ss_id=1 inode=0 slot=0
+[2025-11-21 17:24:51] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1
+[2025-11-21 17:25:21] MKDIR_TOUCH_OK path=1/0_0.txt.chk
+[2025-11-21 17:25:33] MKDIR_TOUCH_OK path=1/1.txt
+[2025-11-21 17:25:33] MKDIR_TOUCH_OK path=1/1.txt.bak
+[2025-11-21 17:25:33] INODE_ADD ss_id=1 inode=1 slot=1
+[2025-11-21 17:25:33] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=2
+[2025-11-21 17:25:39] CLIENT_ACCEPT fd=5
+[2025-11-21 17:25:39] CLIENT_CONNECT fd=5
+[2025-11-21 17:25:39] CLIENT_CMD fd=5 cmd="WRITE 1 0"
+[2025-11-21 17:25:39] WRITE_REQUEST inode=1 filepath=1/1.txt from_fd=5 sentence=0
+[2025-11-21 17:25:39] SENTENCE_RETRIEVED filepath=1/1.txt sentence=1 to_fd=5
+[2025-11-21 17:26:31] WRITE_APPLIED filepath=1/1.txt sentence=1 delta=791
+[2025-11-21 17:26:31] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1024
+[2025-11-21 17:26:31] WRITE_COMPLETED inode=1 filepath=1/1.txt
+[2025-11-21 17:26:36] CLIENT_ACCEPT fd=6
+[2025-11-21 17:26:36] CLIENT_CONNECT fd=6
+[2025-11-21 17:26:36] CLIENT_CMD fd=6 cmd="STREAM 1"
+[2025-11-21 17:26:36] STREAM_REQUEST inode=1 filepath=1/1.txt from_fd=6
+[2025-11-21 17:26:51] STREAM_SEND filepath=1/1.txt to_fd=6
+[2025-11-21 17:26:51] STREAM_SENT inode=1 filepath=1/1.txt to_fd=6
+[2025-11-21 17:26:51] CLIENT_ACCEPT fd=5
+[2025-11-21 17:26:51] CLIENT_CONNECT fd=5
+[2025-11-21 17:26:51] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 1/0_0.txt.chk"
+[2025-11-21 17:26:51] READ_SEND filepath=1/0_0.txt.chk to_fd=5
+[2025-11-21 17:26:51] READ_CHECKPOINT_SENT filepath=1/0_0.txt.chk to_fd=5
+[2025-11-21 17:26:58] CLIENT_ACCEPT fd=6
+[2025-11-21 17:26:58] CLIENT_CONNECT fd=6
+[2025-11-21 17:26:58] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-21 17:26:58] WRITE_REQUEST inode=0 filepath=1/0.txt from_fd=6 sentence=0
+[2025-11-21 17:26:58] SENTENCE_RETRIEVED filepath=1/0.txt sentence=1 to_fd=6
+[2025-11-21 17:27:05] WRITE_APPLIED filepath=1/0.txt sentence=1 delta=4
+[2025-11-21 17:27:05] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1024
+[2025-11-21 17:27:05] WRITE_COMPLETED inode=0 filepath=1/0.txt
+[2025-11-21 17:27:08] CLIENT_ACCEPT fd=5
+[2025-11-21 17:27:08] CLIENT_CONNECT fd=5
+[2025-11-21 17:27:08] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-21 17:27:08] READ_START inode=0 filepath=1/0.txt by_fd=5
+[2025-11-21 17:27:08] READ_SEND filepath=1/0.txt to_fd=5
+[2025-11-21 17:27:08] READ_SENT inode=0 filepath=1/0.txt to_fd=5
+[2025-11-21 17:27:27] CLIENT_ACCEPT fd=6
+[2025-11-21 17:27:27] CLIENT_CONNECT fd=6
+[2025-11-21 17:27:27] CLIENT_CMD fd=6 cmd="READ_CHECKPOINT 1/0_0.txt.chk"
+[2025-11-21 17:27:27] READ_SEND filepath=1/0_0.txt.chk to_fd=6
+[2025-11-21 17:27:27] READ_CHECKPOINT_SENT filepath=1/0_0.txt.chk to_fd=6
+[2025-11-21 17:27:42] MKDIR_TOUCH_OK path=1/0_2p.txt.chk
+[2025-11-21 17:28:28] CLIENT_ACCEPT fd=5
+[2025-11-21 17:28:28] CLIENT_CONNECT fd=5
+[2025-11-21 17:28:28] CLIENT_CMD fd=5 cmd="READ_CHECKPOINT 1/0_2p.txt.chk"
+[2025-11-21 17:28:28] READ_SEND filepath=1/0_2p.txt.chk to_fd=5
+[2025-11-21 17:28:28] READ_CHECKPOINT_SENT filepath=1/0_2p.txt.chk to_fd=5
+[2025-11-21 17:28:38] CLIENT_ACCEPT fd=6
+[2025-11-21 17:28:38] CLIENT_CONNECT fd=6
+[2025-11-21 17:28:38] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:28:38] READ_START inode=0 filepath=1/0.txt by_fd=6
+[2025-11-21 17:28:38] READ_SEND filepath=1/0.txt to_fd=6
+[2025-11-21 17:28:38] READ_SENT inode=0 filepath=1/0.txt to_fd=6
+[2025-11-21 17:28:46] CLIENT_ACCEPT fd=5
+[2025-11-21 17:28:46] CLIENT_CONNECT fd=5
+[2025-11-21 17:28:46] CLIENT_CMD fd=5 cmd="REVERT 1/0_0.txt.chk"
+[2025-11-21 17:28:46] REVERT_START filepath=1/0.txt to_fd=5
+[2025-11-21 17:28:46] REVERT_SENT filepath=1/0.txt to_fd=5
+[2025-11-21 17:28:51] CLIENT_ACCEPT fd=6
+[2025-11-21 17:28:51] CLIENT_CONNECT fd=6
+[2025-11-21 17:28:51] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:28:51] READ_START inode=0 filepath=1/0.txt by_fd=6
+[2025-11-21 17:28:51] READ_SEND filepath=1/0.txt to_fd=6
+[2025-11-21 17:28:51] READ_SENT inode=0 filepath=1/0.txt to_fd=6
+[2025-11-21 17:28:56] BACKUP_PATH src=1/1.txt backup=1/1.txt.bak
+[2025-11-21 17:28:56] INODE_FREE ss_id=1 inode=1 slot=1
+[2025-11-21 17:28:56] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1024
+[2025-11-21 17:30:42] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:30:42] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:30:42] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:30:42] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 17:30:48] CLIENT_ACCEPT fd=5
+[2025-11-21 17:30:48] CLIENT_CONNECT fd=5
+[2025-11-21 17:30:48] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:30:48] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:30:48] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:30:53] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-21 17:30:53] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:30:53] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:30:59] CLIENT_ACCEPT fd=6
+[2025-11-21 17:30:59] CLIENT_CONNECT fd=6
+[2025-11-21 17:30:59] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:30:59] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 17:30:59] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 17:30:59] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 17:31:06] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:31:06] INODE_FREE ss_id=0 inode=0 slot=0
+[2025-11-21 17:31:06] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:31:17] DIR_DELETED path=1
+[2025-11-21 17:34:34] PERSIST_LOADED path=backup.txt ss_id=0
+[2025-11-21 17:34:58] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:35:04] CLIENT_LISTENER start port=9000
+[2025-11-21 17:35:24] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:35:24] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:35:24] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:35:24] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 17:35:29] CLIENT_ACCEPT fd=5
+[2025-11-21 17:35:29] CLIENT_CONNECT fd=5
+[2025-11-21 17:35:29] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:35:29] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:35:29] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:35:34] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=4
+[2025-11-21 17:35:34] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:35:34] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:35:37] CLIENT_ACCEPT fd=6
+[2025-11-21 17:35:37] CLIENT_CONNECT fd=6
+[2025-11-21 17:35:37] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:35:37] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 17:35:37] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 17:35:37] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 17:35:41] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:35:41] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:35:41] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:35:41] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:35:52] CLIENT_ACCEPT fd=5
+[2025-11-21 17:35:52] CLIENT_CONNECT fd=5
+[2025-11-21 17:35:52] CLIENT_CMD fd=5 cmd="READ 0"
+[2025-11-21 17:35:52] READ_START inode=0 filepath=0/0.txt by_fd=5
+[2025-11-21 17:35:52] READ_SEND filepath=0/0.txt to_fd=5
+[2025-11-21 17:35:52] READ_SENT inode=0 filepath=0/0.txt to_fd=5
+[2025-11-21 17:37:47] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:37:53] CLIENT_LISTENER start port=9001
+[2025-11-21 17:43:10] MKDIR_TOUCH_OK path=1/1.txt
+[2025-11-21 17:43:10] MKDIR_TOUCH_OK path=1/1.txt.bak
+[2025-11-21 17:43:10] INODE_ADD ss_id=1 inode=1 slot=0
+[2025-11-21 17:43:10] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1
+[2025-11-21 17:44:48] CLIENT_ACCEPT fd=6
+[2025-11-21 17:44:48] CLIENT_CONNECT fd=6
+[2025-11-21 17:44:48] CLIENT_CMD fd=6 cmd="WRITE 0 0"
+[2025-11-21 17:44:48] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=6 sentence=0
+[2025-11-21 17:44:48] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=6
+[2025-11-21 17:45:01] WRITE_RECV_FAIL filepath=0/0.txt sentence=1 err=peer_closed
+[2025-11-21 17:45:01] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:45:01] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:46:06] DIR_DELETED path=1
+[2025-11-21 17:46:06] DIR_DELETED path=0
+[2025-11-21 17:46:41] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:46:45] CLIENT_LISTENER start port=9000
+[2025-11-21 17:46:55] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:47:00] CLIENT_LISTENER start port=9001
+[2025-11-21 17:47:15] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:47:15] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:47:15] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:47:15] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 17:47:18] CLIENT_ACCEPT fd=5
+[2025-11-21 17:47:18] CLIENT_CONNECT fd=5
+[2025-11-21 17:47:18] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:47:18] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:47:18] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:47:28] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=12
+[2025-11-21 17:47:28] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:47:28] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:47:32] CLIENT_ACCEPT fd=6
+[2025-11-21 17:47:32] CLIENT_CONNECT fd=6
+[2025-11-21 17:47:32] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:47:32] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 17:47:32] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 17:47:32] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 17:47:36] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 17:47:59] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:47:59] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:47:59] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:47:59] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:48:03] CLIENT_ACCEPT fd=5
+[2025-11-21 17:48:03] CLIENT_CONNECT fd=5
+[2025-11-21 17:48:03] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:48:03] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:48:03] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:48:13] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=5
+[2025-11-21 17:48:13] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:48:13] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:48:17] CLIENT_ACCEPT fd=6
+[2025-11-21 17:48:17] CLIENT_CONNECT fd=6
+[2025-11-21 17:48:17] CLIENT_CMD fd=6 cmd="READ 0"
+[2025-11-21 17:48:17] READ_START inode=0 filepath=0/0.txt by_fd=6
+[2025-11-21 17:48:17] READ_SEND filepath=0/0.txt to_fd=6
+[2025-11-21 17:48:17] READ_SENT inode=0 filepath=0/0.txt to_fd=6
+[2025-11-21 17:48:21] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 17:48:30] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:48:30] BACKUP_PATH src=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:48:30] UNDO_APPLIED filepath=0/0.txt backup=0/0.txt.bak
+[2025-11-21 17:48:30] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:48:34] CLIENT_ACCEPT fd=5
+[2025-11-21 17:48:34] CLIENT_CONNECT fd=5
+[2025-11-21 17:48:34] CLIENT_CMD fd=5 cmd="WRITE 0 0"
+[2025-11-21 17:48:34] WRITE_REQUEST inode=0 filepath=0/0.txt from_fd=5 sentence=0
+[2025-11-21 17:48:34] SENTENCE_RETRIEVED filepath=0/0.txt sentence=1 to_fd=5
+[2025-11-21 17:48:43] WRITE_APPLIED filepath=0/0.txt sentence=1 delta=6
+[2025-11-21 17:48:43] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1024
+[2025-11-21 17:48:43] WRITE_COMPLETED inode=0 filepath=0/0.txt
+[2025-11-21 17:48:47] EXEC_SENT filepath=0/0.txt to_nm_fd=3
+[2025-11-21 17:51:56] MKDIR_TOUCH_OK path=1/0.txt
+[2025-11-21 17:51:56] MKDIR_TOUCH_OK path=1/0.txt.bak
+[2025-11-21 17:51:56] INODE_ADD ss_id=1 inode=0 slot=0
+[2025-11-21 17:51:56] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=1
+[2025-11-21 17:52:00] BACKUP_PATH src=1/1.txt backup=1/1.txt.bak
+[2025-11-21 17:52:06] MKDIR_TOUCH_OK path=1/0.txt
+[2025-11-21 17:52:06] MKDIR_TOUCH_OK path=1/0.txt.bak
+[2025-11-21 17:52:06] INODE_ADD ss_id=1 inode=0 slot=1
+[2025-11-21 17:52:06] PERSIST_SAVED path=backup.txt ss_id=1 inode_count=2
+[2025-11-21 17:58:16] DIR_DELETED path=1
+[2025-11-21 17:59:37] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 17:59:44] CLIENT_LISTENER start port=9000
+[2025-11-21 17:59:58] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 17:59:58] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 17:59:58] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 17:59:58] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 18:02:31] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 18:02:36] CLIENT_LISTENER start port=9001
+[2025-11-21 18:02:58] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 18:02:58] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 18:02:58] INODE_ADD ss_id=0 inode=0 slot=0
+[2025-11-21 18:02:58] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=1
+[2025-11-21 18:03:11] MKDIR_TOUCH_OK path=0/0.txt
+[2025-11-21 18:03:11] MKDIR_TOUCH_OK path=0/0.txt.bak
+[2025-11-21 18:03:11] INODE_ADD ss_id=0 inode=0 slot=1
+[2025-11-21 18:03:11] PERSIST_SAVED path=backup.txt ss_id=0 inode_count=2
+[2025-11-21 18:25:26] PERSIST_LOAD_FAIL path=backup.txt err=No such file or directory
+[2025-11-21 18:25:32] CLIENT_LISTENER start port=9000
