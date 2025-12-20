@@ -140,10 +140,8 @@ All error responses from the Nameserver use the ERR|<CODE>|<DETAIL> convention d
 ADDACCESS <permission> <filename> <clientname>
 ```
 **Note:** Permission must be either `R` or `W` (no `RW`).
-
 **Purpose:**  
 Grant a user explicit read or write permission on a file.
-
 **Flow:**
 1. Client → Name Server:  
    `Packet.msg = "ADDACCESS <perm> <filename> <clientname>"`
@@ -153,52 +151,42 @@ Grant a user explicit read or write permission on a file.
    - If the client does not exist:  
      `ERR|no_such_client|<clientname>`
 3. If validation passes and the requester is the owner, the Name Server updates file metadata and responds with `ADDACCESS_OK`.
-
 ---
 
 ### APPROVE
 ```
 APPROVE <filename> <username> <permission>
 ```
-
 **Purpose:**  
 Approve a pending access request made by another user.
-
 **Flow:**
 1. Client → Name Server: `APPROVE <filename> <username> <permission>`
 2. Name Server verifies that the requester is the file owner.
 3. Permission is applied and an `OK` or `ERR` response is returned.
-
 ---
 
 ### CHECKPOINT
 ```
 CHECKPOINT <filename> <tag>
 ```
-
 **Purpose:**  
 Create a persistent snapshot of a file’s contents on the Storage Server.
-
 **Flow:**
 1. Name Server verifies file existence and user permissions.
 2. Name Server instructs the Storage Server to create a checkpoint using `<inode> + <tag>`.
 3. Checkpoint metadata is recorded and an `OK` or `ERR` response is sent to the client.
-
 ---
 
 ### CREATE
 ```
 CREATE <filename>
 ```
-
 **Purpose:**  
 Create new file metadata and allocate storage.
-
 **Flow:**
 1. Name Server assigns a new inode.
 2. A Storage Server is selected.
 3. Metadata is written and `OK` is returned, or an error such as `FILE_EXISTS`.
-
 ---
 
 ### CREATEFOLDER
