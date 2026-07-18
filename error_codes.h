@@ -116,6 +116,4 @@
 // Versioning / undo
 #define ERR_VERSION_NOT_FOUND  "ERR|VERSION_NOT_FOUND|Requested version for undo not found."
 
-
-// Note: Add new codes as needed; keep messages short and parseable by clients.
 #endif

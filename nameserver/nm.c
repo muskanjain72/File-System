@@ -381,7 +381,7 @@ void *connection_handler(void *arg)
                     send(fd, &outp, sizeof(outp), 0);
                 }
             }
-            else if (strt && strcmp(strt, "LISTCHECKPOINTS") == 0)
+            else if (strt && (strcmp(strt, "LISTCHECKPOINT") == 0 || strcmp(strt, "LISTCHECKPOINTS") == 0))
             {
                 char *fname = strtok(NULL, " ");
                 /* Optional tag parameter (currently ignored for listing all) */

@@ -3,6 +3,7 @@
 
 #include <time.h>
 
+//this is required for end to end transfer and uniquely identify clients
 typedef struct Client {
     int client_id;
     char client_name[64];
@@ -10,7 +11,7 @@ typedef struct Client {
     int port;
 } Client;
 
-typedef struct AccessRequest {
+typedef struct AccessRequest { 
     char requester[64];   // user asking permission
     char perm[4];         // "r" or "rw"
     struct AccessRequest *next;
@@ -20,11 +21,11 @@ typedef struct StorageServer {
     int ss_id;
     char ip_address[32];
     int port;
-    long used_bytes;
+    long used_bytes; 
     int fd;
     int status; //online=1, offline=0
     int inodes[1024]; // array of inode numbers stored on this server
-    pthread_mutex_t lock;
+    pthread_mutex_t lock; //lock for thready in case of concurrent access
 } StorageServer;
 
 typedef struct FileOwnerPerm {
@@ -36,7 +37,7 @@ typedef struct FileOwnerPerm {
 
 typedef struct SentenceNode {
     int sentence_no;
-    int locked;
+    int locked;  
     int is_terminated;
     struct SentenceNode *next;
 } SentenceNode;
@@ -57,24 +58,24 @@ typedef struct FileMeta {
     int prev_word_count;
     int prev_char_count;
     char created_by[64];
-    time_t ctime;
-    time_t rtime;
-    time_t wtime;
+    time_t ctime; //create time
+    time_t rtime; //last read time
+    time_t wtime; //last write time
     char folder_path[256]; // hierarchical folder path ("" for root)
     // Linked list of checkpoints for this file (tag + time)
     struct CheckpointTag *checkpoints;
-    AccessRequest *pending_requests;   // linked list of pending access requests
+    AccessRequest *pending_requests;   // linked list of pending access requests for this file
 } FileMeta;
 
 typedef struct FolderMeta {
     char path[256]; // full path, e.g. "docs" or "docs/tutorials"
-    char created_by[64];
+    char created_by[64]; // user who created the folder
     time_t created;
     struct FolderMeta *next;
 } FolderMeta;
 
 typedef struct HashNode {
-    FileMeta *file;
+    FileMeta *file;  // pointer to the file metadata
     struct HashNode *next;
 } HashNode;
 
@@ -97,7 +98,7 @@ typedef struct {
 } p1;
 
 typedef struct CheckpointTag {
-    char tag[128];
+    char tag[128];  // tag for the checkpoint
     time_t when;
     struct CheckpointTag *next;
 } CheckpointTag;

@@ -15,12 +15,12 @@ char *pretty_time(const char *ts)
         return out;
     }
 
-    time_t t = (time_t)atol(ts);
+    time_t t = (time_t)atol(ts);  //convert to time_t
     struct tm tm;
     localtime_r(&t, &tm);
 
     // Format: YYYY-MM-DD HH:MM:SS
-    strftime(out, sizeof(out), "%Y-%m-%d %H:%M:%S", &tm);
+    strftime(out, sizeof(out), "%Y-%m-%d %H:%M:%S", &tm); //used to format the time in a human-readable way
 
     return out;
 }
@@ -153,7 +153,7 @@ int main()
         strncpy(p.msg, buf, sizeof(p.msg) - 1);
         p.msg[sizeof(p.msg) - 1] = '\0';
 
-    if (strncmp(p.msg, "VIEW", 4) != 0 && strncmp(p.msg, "READ", 4) != 0 && strncmp(p.msg, "WRITE", 5) != 0 && strncmp(p.msg, "CREATE", 6) != 0 && strncmp(p.msg, "INFO", 4) != 0 && strncmp(p.msg, "UNDO", 4) != 0 && strncmp(p.msg, "EXEC", 4) != 0 && strncmp(p.msg, "DELETE", 6) != 0 && strncmp(p.msg, "STREAM", 6) != 0 && strncmp(p.msg, "LIST", 4) != 0 && strncmp(p.msg, "ADDACCESS", 9) != 0 && strncmp(p.msg, "REMACCESS", 9) != 0 && strncmp(p.msg, "CREATEFOLDER", 13) != 0 && strncmp(p.msg, "MOVE", 4) != 0 && strncmp(p.msg, "CHECKPOINT",10)!=0 && strncmp(p.msg, "REVERT",6)!=0 && strncmp(p.msg,"VIEWCHECKPOINT",13)!=0 && strncmp(p.msg,"LISTCHECKPOINT",15)!=0 && strncmp(p.msg, "REQUESTACCESS", 13) != 0 && strncmp(p.msg, "VIEWREQUESTS", 12) != 0 && strncmp(p.msg, "APPROVE", 7) != 0 && strncmp(p.msg, "DENY", 4) != 0)
+    if (strncmp(p.msg, "VIEW", 4) != 0 && strncmp(p.msg, "READ", 4) != 0 && strncmp(p.msg, "WRITE", 5) != 0 && strncmp(p.msg, "CREATE", 6) != 0 && strncmp(p.msg, "INFO", 4) != 0 && strncmp(p.msg, "UNDO", 4) != 0 && strncmp(p.msg, "EXEC", 4) != 0 && strncmp(p.msg, "DELETE", 6) != 0 && strncmp(p.msg, "STREAM", 6) != 0 && strncmp(p.msg, "LIST", 4) != 0 && strncmp(p.msg, "ADDACCESS", 9) != 0 && strncmp(p.msg, "REMACCESS", 9) != 0 && strncmp(p.msg, "CREATEFOLDER", 13) != 0 && strncmp(p.msg, "MOVE", 4) != 0 && strncmp(p.msg, "CHECKPOINT",10)!=0 && strncmp(p.msg, "REVERT",6)!=0 && strncmp(p.msg,"VIEWCHECKPOINT",13)!=0 && strncmp(p.msg,"LISTCHECKPOINT",14)!=0 && strncmp(p.msg, "REQUESTACCESS", 13) != 0 && strncmp(p.msg, "VIEWREQUESTS", 12) != 0 && strncmp(p.msg, "APPROVE", 7) != 0 && strncmp(p.msg, "DENY", 4) != 0)
         {
             // printf("ONot a valid cmd.\n");
             printf(ERR_INVALID_CMD "\n");
