@@ -3,6 +3,7 @@
 void handle_exec_response(int sockfd)
 {
     Packet p;
+    //streaming exec output from storage server to client
 
     // Step 2: Read all EXEC output lines UNTIL "EXEC|END"
     while (1)

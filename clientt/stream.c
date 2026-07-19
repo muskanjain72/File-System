@@ -70,7 +70,7 @@ void stream_file_from_storage(const char *ss_ip, int ss_port, int inode_no)
             // Extract each word
             int i = 0;
             // prepend leftover from previous chunk
-            if (leftover[0])
+            if (leftover[0]) //ignore if leftover is empty
             {
                 strcpy(word, leftover);
                 i = strlen(word);

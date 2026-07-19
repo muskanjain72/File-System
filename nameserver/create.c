@@ -186,7 +186,7 @@ FileMeta *check_cache(const char *filename)
     printf("check_cache: '%s' not found in cache\n", filename);
     return NULL;
 }
-// Adds or updates cache entry
+// Adds or updates cache entry -> LRU replacement if full
 void add_to_cache(const char *filename, FileMeta *file)
 {
     pthread_mutex_lock(&cache_mutex);
@@ -340,7 +340,7 @@ int create(Client *c, char *buf)
     f->owners->next = NULL;
 
     f->ss_id = -1;
-    f->block_map = NULL;
+    // f->block_map = NULL;
     f->file_size = 0;
     f->sentences = NULL;
     pthread_mutex_init(&f->sentence_mutex, NULL);

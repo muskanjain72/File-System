@@ -5,29 +5,31 @@
 
 //this is required for end to end transfer and uniquely identify clients
 typedef struct Client {
-    int client_id;
+    int client_id;  //assigned by the name server
     char client_name[64];
     char ip_address[32];
     int port;
 } Client;
 
+//1 per file
 typedef struct AccessRequest { 
-    char requester[64];   // user asking permission
+    char requester[64];   // user asking permission -> stores client name
     char perm[4];         // "r" or "rw"
     struct AccessRequest *next;
 } AccessRequest;
 
 typedef struct StorageServer {
-    int ss_id;
+    int ss_id;  //assigned by the name server
     char ip_address[32];
     int port;
     long used_bytes; 
-    int fd;
+    int fd; 
     int status; //online=1, offline=0
     int inodes[1024]; // array of inode numbers stored on this server
     pthread_mutex_t lock; //lock for thready in case of concurrent access
 } StorageServer;
 
+//metadata for each file, stored in the name server
 typedef struct FileOwnerPerm {
     int client_id;
     char client_name[64];
@@ -47,10 +49,10 @@ typedef struct FileMeta {
     char filename[128];
     FileOwnerPerm *owners; // linked list of owners/permissions
     int ss_id; // storage server id
-    char **block_map; // array of strings (paths on SS), set to data filename like "inode_<inode>.data"
+    // char **block_map; // array of strings (paths on SS), set to data filename like "inode_<inode>.data"
     long file_size;
     SentenceNode *sentences; // linked list of sentence nodes
-    pthread_mutex_t sentence_mutex; // used only briefly for list modifications
+    pthread_mutex_t sentence_mutex; // used only briefly for list modifications -> at a time, only 1 can modify the metadata of a file
     int sentence_count;
     int word_count;
     int char_count;
@@ -74,7 +76,7 @@ typedef struct FolderMeta {
     struct FolderMeta *next;
 } FolderMeta;
 
-typedef struct HashNode {
+typedef struct HashNode {  //used for name server's hash table
     FileMeta *file;  // pointer to the file metadata
     struct HashNode *next;
 } HashNode;

@@ -6,58 +6,7 @@
 #include <arpa/inet.h>
 #include "read.h"
 
-/*void read_file_from_storage(const char *ss_ip, int ss_port, int inode_no) {
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock < 0) {
-        perror("socket");
-        return;
-    }
 
-    struct sockaddr_in ss_addr;
-    memset(&ss_addr, 0, sizeof(ss_addr));
-    ss_addr.sin_family = AF_INET;
-    ss_addr.sin_port = htons(ss_port);
-
-    if (inet_pton(AF_INET, ss_ip, &ss_addr.sin_addr) <= 0) {
-        perror("Invalid storage server IP");
-        close(sock);
-        return;
-    }
-
-    if (connect(sock, (struct sockaddr *)&ss_addr, sizeof(ss_addr)) < 0) {
-        perror("connect to storage server failed");
-        close(sock);
-        return;
-    }
-
-    printf("Connected to Storage Server %s:%d\n", ss_ip, ss_port);
-
-    // Send read request
-    char req[128];
-    snprintf(req, sizeof(req), "READ %d", inode_no);
-    if (send(sock, req, strlen(req), 0) <= 0) {
-        perror("send read request");
-        close(sock);
-        return;
-    }
-
-    printf("Sent read request for inode %d\n", inode_no);
-
-    // Receive file data
-    char buffer[1024];
-    ssize_t n;
-    printf("File contents:\n");
-    while ((n = recv(sock, buffer, sizeof(buffer)-1, 0)) > 0) {
-        buffer[n] = '\0';  // null terminate
-        printf("%s", buffer);
-    }
-
-    if (n < 0) perror("recv failed");
-
-    printf("\nFinished reading file.\n");
-    close(sock);
-}
-*/
 void read_file_from_storage(const char *ss_ip, int ss_port, int inode_no)
 {
 
@@ -122,7 +71,7 @@ void read_file_from_storage(const char *ss_ip, int ss_port, int inode_no)
     {
         buffer[n] = '\0';
         printf("%s", buffer);
-        fflush(stdout);
+        fflush(stdout);  // to ensure immediate output
     }
 
     // 6) Storage server crashed mid-transfer

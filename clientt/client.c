@@ -58,9 +58,9 @@ int main()
     }
 
     struct sockaddr_in server_addr;
-    memset(&server_addr, 0, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(server_port);
+    memset(&server_addr, 0, sizeof(server_addr)); // Initialize server_addr to zero
+    server_addr.sin_family = AF_INET;  // IPv4
+    server_addr.sin_port = htons(server_port);  //htons converts the port to network byte order
     if (inet_pton(AF_INET, server_ip, &server_addr.sin_addr) <= 0)
     {
         fprintf(stderr, "%s\n", ERR_NM_INVALID_IP);
@@ -88,7 +88,7 @@ int main()
     }
     char client_ip[32];
     inet_ntop(AF_INET, &client_addr.sin_addr, client_ip, sizeof(client_ip));
-    int client_port = ntohs(client_addr.sin_port);
+    int client_port = ntohs(client_addr.sin_port);  //network byte order to host byte order
 
     printf("Connected! OS assigned IP: %s, Port: %d\n", client_ip, client_port);
 
@@ -106,7 +106,7 @@ int main()
     // Send client info to server
     Client c;
     memset(&c, 0, sizeof(c)); // Initialize all fields to 0
-    c.client_id = 0;          // Server can assign unique ID
+    c.client_id = 0;          // Server will assign unique ID
     strncpy(c.client_name, client_name, sizeof(c.client_name) - 1);
     strncpy(c.ip_address, client_ip, sizeof(c.ip_address) - 1);
     c.port = client_port;
@@ -160,7 +160,7 @@ int main()
             continue;
         }
 
-        // --- Send to server ---
+        // --- Send to server --- -> send a packet to the server
         ssize_t n = send(sock, &p, sizeof(p), 0);
 
         if (n <= 0)
@@ -196,7 +196,7 @@ int main()
         {
             char *token;
             char buf[1024];
-            strncpy(buf, response.msg, sizeof(buf));
+            strncpy(buf, response.msg, sizeof(buf));  //copy to local buffer
 
             // Parse
             token = strtok(buf, "|");  // "READ"
@@ -211,7 +211,7 @@ int main()
             token = strtok(NULL, "|"); // ss_port
             int ss_port = atoi(token);
 
-            token = strtok(NULL, "|"); // inode_no
+            token = strtok(NULL, "|"); // inode_no 
             int inode_no = atoi(token);
 
             printf("File '%s' is on Storage Server %s:%d (inode %d)\n",
@@ -219,7 +219,7 @@ int main()
 
             read_file_from_storage(ss_ip, ss_port, inode_no);
 
-            // Now you can connect to ss_ip:ss_port to read the file
+            // Now you can connect to ss_ip:ss_port directly to read the file
         }
         else if (strncmp(response.msg, "WRITE|", 6) == 0)
         {
@@ -271,6 +271,7 @@ int main()
             const char *c = code ? code : "unknown";
             const char *d = detail ? detail : "";
 
+            //handles common error messages from the server and maps them to user-friendly messages
             /* Map common server error codes to friendlier messages for folder/move/view flows */
             if (strcmp(c, "no_such_folder") == 0)
             {
@@ -315,6 +316,7 @@ int main()
             // Accept both formats:
             // 1) UNDO|UNDO_SUCCESS|filename
             // 2) UNDO_SUCCESS|filename
+            //in this we dont need to send the request to the storage server, we just need to print the result of the undo operation
             char tmp[1024];
             strncpy(tmp, response.msg, sizeof(tmp));
             tmp[sizeof(tmp) - 1] = '\0';
@@ -346,7 +348,7 @@ int main()
             }
 
             if (status && strstr(status, "SUCCESS"))
-                printf("✅ UNDO successful for file '%s'\n", filename ? filename : "unknown");
+                printf(" UNDO successful for file '%s'\n", filename ? filename : "unknown");
             else
                 fprintf(stderr, "%s File: %s Reason: %s\n", ERR_UNDO_FAIL, filename ? filename : "unknown", reason ? reason : "unknown");
 
@@ -467,7 +469,7 @@ int main()
         }
     }
 
-    close(sock);
+    close(sock); //close the connection to the server
     printf("Client Disconnected.\n");
     return 0;
 }

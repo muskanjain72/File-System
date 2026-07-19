@@ -217,6 +217,16 @@ void write_file(Client *c, const char *filename, int sentenceno, int fd)
 
     int sentences_added = 0, words_added = 0, chars_added = 0, is_terminated = 0;
     printf("%s\n",inp.msg);
+    if (strncmp(inp.msg, "WRITE_FAIL|", 11) == 0)
+    {
+        const char *reason = inp.msg + 11;
+        nameserver_log("WRITE_FAIL_FROM_CLIENT user=%s id=%d file=%s sentence=%d reason=%s",
+                       c->client_name, c->client_id, filename, sentenceno,
+                       *reason ? reason : "unknown");
+        target->locked = 0;
+        nameserver_log("WRITE_UNLOCK file=%s sentence=%d", filename, sentenceno);
+        return;
+    }
     if (sscanf(inp.msg, "RESULT|%d|%d|%d|%d", &sentences_added, &words_added, &chars_added, &is_terminated) == 4)
     {
 
@@ -266,6 +276,11 @@ void write_file(Client *c, const char *filename, int sentenceno, int fd)
         }
 
         pthread_mutex_unlock(&file->sentence_mutex);
+    }
+    else
+    {
+        nameserver_log("WRITE_UNEXPECTED_CLIENT_RESPONSE user=%s id=%d file=%s sentence=%d msg=\"%s\"",
+                       c->client_name, c->client_id, filename, sentenceno, inp.msg);
     }
     // printf("done with reading");
     // save_state("nm_state.dat");
